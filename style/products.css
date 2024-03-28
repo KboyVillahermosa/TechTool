@@ -1,0 +1,369 @@
+*{
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+}
+#cartButton{
+  color: red;
+}
+.item-header{
+    justify-content: center;
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    padding: 10px;
+}
+.item-content{
+    margin-top: 80px;
+    margin: 10px 30px;
+    margin-bottom: 30px;
+}
+@media screen and (max-width: 1383px) {
+  .item-content{
+    text-align: center;
+  }
+  
+}
+
+.item-content h1{
+    font-size: clamp(1.25rem, -0.3125rem + 5vw, 2.5rem);
+}
+@media screen and (max-width: 850px){
+    .item-header{
+        margin-top: 80px;
+    }
+}
+.explore{
+    padding: 8px;
+    border-radius: 10px;
+    background: blue;
+    color: white;
+}
+
+.item-title{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    height: 60vh;
+}
+
+.products-header{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    padding: 20px;
+
+}
+.products-list {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    box-shadow:  0 0 10px rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 20px;
+}
+.products-list img{
+    width: 100%;
+    max-width: 500px;
+}
+
+.products-list button{
+    background: blue;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: clamp(0.625rem, -0.1563rem + 2.5vw, 1.25rem);
+}
+
+
+/*LOader*/
+.loader-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader {
+    --path: #2f3545;
+    --dot: #5628ee;
+    --duration: 3s;
+    width: 44px;
+    height: 44px;
+    position: relative;
+  }
+  
+  .loader:before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    position: absolute;
+    display: block;
+    background: var(--dot);
+    top: 37px;
+    left: 19px;
+    transform: translate(-18px, -18px);
+    animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .loader svg rect, .loader svg polygon, .loader svg circle {
+    fill: none;
+    stroke: var(--path);
+    stroke-width: 10px;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+  }
+  
+  .loader svg polygon {
+    stroke-dasharray: 145 76 145 76;
+    stroke-dashoffset: 0;
+    animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg rect {
+    stroke-dasharray: 192 64 192 64;
+    stroke-dashoffset: 0;
+    animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader svg circle {
+    stroke-dasharray: 150 50 150 50;
+    stroke-dashoffset: 75;
+    animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  .loader.triangle {
+    width: 48px;
+  }
+  
+  .loader.triangle:before {
+    left: 21px;
+    transform: translate(-10px, -18px);
+    animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+  }
+  
+  @keyframes pathTriangle {
+    33% {
+      stroke-dashoffset: 74;
+    }
+  
+    66% {
+      stroke-dashoffset: 147;
+    }
+  
+    100% {
+      stroke-dashoffset: 221;
+    }
+  }
+  
+  @keyframes dotTriangle {
+    33% {
+      transform: translate(0, 0);
+    }
+  
+    66% {
+      transform: translate(10px, -18px);
+    }
+  
+    100% {
+      transform: translate(-10px, -18px);
+    }
+  }
+  
+  @keyframes pathRect {
+    25% {
+      stroke-dashoffset: 64;
+    }
+  
+    50% {
+      stroke-dashoffset: 128;
+    }
+  
+    75% {
+      stroke-dashoffset: 192;
+    }
+  
+    100% {
+      stroke-dashoffset: 256;
+    }
+  }
+  
+  @keyframes dotRect {
+    25% {
+      transform: translate(0, 0);
+    }
+  
+    50% {
+      transform: translate(18px, -18px);
+    }
+  
+    75% {
+      transform: translate(0, -36px);
+    }
+  
+    100% {
+      transform: translate(-18px, -18px);
+    }
+  }
+  
+  @keyframes pathCircle {
+    25% {
+      stroke-dashoffset: 125;
+    }
+  
+    50% {
+      stroke-dashoffset: 175;
+    }
+  
+    75% {
+      stroke-dashoffset: 225;
+    }
+  
+    100% {
+      stroke-dashoffset: 275;
+    }
+  }
+  
+  .loader {
+    display: inline-block;
+    margin: 0 16px;
+  }
+
+  
+  .text{
+    justify-content: center;
+    display: block;
+  }
+
+
+  #bike{
+    display: none;
+
+  }
+  .product-tab button{
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+
+  .item-image{
+    width: 100%;
+    max-width: 700px;
+}
+#products{
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    display: flex;
+    padding: 20px;
+    
+  }
+.product-content {
+  width: 100%;
+  max-width: 500px;
+  background: white;
+  box-shadow:  0 0 10px rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 10px;
+}
+.product-content p{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.product-content img{
+  width: 100%;
+  max-width: 500px;
+  height: 40vh;
+}
+
+@media screen and (max-width: 555px) {
+  .product-content img{
+    height: auto;
+  }
+}
+
+
+ /* about us */
+
+ .about-us-title{
+  justify-content: center;
+  flex-direction: row;
+  display: flex;
+  align-items: center;
+  height: 50vh;
+  flex-wrap: wrap;
+
+}
+
+
+.about-us-header{
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.about-us-content img{
+  width: 100%;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.about-us-text{
+  margin-top: 50px;
+  width: 100%;
+  max-width: 600px;
+  margin: 10px 30px;
+}
+
+.footers{
+  margin-top: 100px;
+}
+
+
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 20%;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.notification-modal {
+  background: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.fa-check{
+  background: rgb(64, 240, 64);
+  color: white;
+  border-radius: 100%;
+  padding: 5px;
+}

@@ -1,0 +1,185 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.introduction-header{
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    padding: 10px;
+}
+.introduction-content h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+}
+
+.explore-title{
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin-top: 100px;
+}
+.explore-title-content{
+    width: 100%;
+    max-width: 900px;
+}
+.explore-title-content h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+}
+
+.figma-header{
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+}
+.figma-content{
+    margin: 10px 20px;
+}
+.figma-text{
+    width: 100%;
+    max-width: 600px;
+    margin-top: 60px;
+}
+.figma-text h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+}
+.dive-into-title-header{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    margin-top: 50px;
+}
+.dive-into-title-content h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+}
+
+/* develodevelopment-headerpment resources */
+.development-header{
+   justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    margin-top: 100px;
+}
+.development-content{
+    margin: 10px 20px;
+}
+.development-text{
+    width: 100%;
+    max-width: 600px;
+    margin-top: 50px;
+    
+}
+.development-text h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+}
+
+/*database management */
+.database-title{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    margin-top: 50px;
+}
+.database-title-content h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+
+}
+
+.database-header{
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    margin-top: 100px;
+}
+.database-content{
+    margin: 10px 20px;
+}
+.database-text{
+    width: 100%;
+    max-width: 600px;
+    margin-top: 50px;
+}
+.database-text h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+}
+
+/*generator */
+.generator-title{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    margin-top: 50px;
+}
+.generator-title-content h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+}
+
+.generator-header{
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    margin-top: 100px;
+}
+.generator-content{
+    margin: 10px 20px;
+}
+.generator-text{
+    width: 100%;
+    max-width: 600px;
+    margin-top: 50px;
+}
+.generator-text h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+}
+
+/*stay infor{m */
+.stay-inform-title{
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    margin-top: 50px;
+}
+.stay-inform-title-content h1{
+    font-size: clamp(1.5625rem, 1.1719rem + 1.25vw, 1.875rem);
+    font-weight: 700;
+}
+
+.stay-inform-header{
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 10px;
+    display: flex;
+    margin-top: 100px;
+}
+.stay-inform-content{
+    width: 100%;
+    margin-bottom: 30px;
+}
+.stay-inform-content h1{
+    text-decoration: underline;
+    font-size: clamp(1.25rem, 0.8594rem + 1.25vw, 1.5625rem);
+}
