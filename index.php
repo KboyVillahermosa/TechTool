@@ -1,21 +1,21 @@
 <?php
 require 'config.php'; // Adjust the path as per your file structure
-if(!isset($_SESSION['login_id'])){
-    header('Location: login.php');
-    exit;
+if (!isset($_SESSION['login_id'])) {
+  header('Location: login.php');
+  exit;
 }
 $id = $_SESSION['login_id'];
 $get_user = mysqli_query($db_connection, "SELECT * FROM `users` WHERE `google_id`='$id'");
-if(mysqli_num_rows($get_user) > 0){
-    $user = mysqli_fetch_assoc($get_user);
-}
-else{
-    header('Location: logout.php');
-    exit;
+if (mysqli_num_rows($get_user) > 0) {
+  $user = mysqli_fetch_assoc($get_user);
+} else {
+  header('Location: logout.php');
+  exit;
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,7 +37,7 @@ else{
         <button type="button" class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown" data-dropdown-placement="bottom">
           <span class="sr-only">Open user menu</span>
           <div class="avatar-container">
-          <img class="h-8 w-8 rounded-full" src="<?php echo $user['profile_image']; ?>" alt="<?php echo $user['name']; ?>">
+            <img class="h-8 w-8 rounded-full" src="<?php echo $user['profile_image']; ?>" alt="<?php echo $user['name']; ?>">
           </div>
         </button>
         <!-- Dropdown menu -->

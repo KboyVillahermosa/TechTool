@@ -56,7 +56,6 @@ if(isset($_GET['code'])):
         exit;
     }
 else: 
-    // Google Login Url = $client->createAuthUrl(); 
 ?>
 <!DOCTYPE html>
 <html lang="en">

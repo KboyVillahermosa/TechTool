@@ -16,7 +16,6 @@ if (mysqli_num_rows($get_user) > 0) {
 
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,7 +24,6 @@ if (mysqli_num_rows($get_user) > 0) {
     <link rel="stylesheet" href="../../dashboard-pages/dashboard-css/tools.css">
     <title>Mockflow</title>
 </head>
-
 <body class="bg-white dark:bg-gray-800">
     <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -110,7 +108,7 @@ if (mysqli_num_rows($get_user) > 0) {
                     </button>
                     <ul id="color-system" class="hidden py-2 space-y-2">
                         <li>
-                            <a href="../dashboard-pages/color/adobecolor.php" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Adobe Color</a>
+                            <a href="../../dashboard-pages/color/adobecolor.php" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Adobe Color</a>
                         </li>
                         <li>
                             <a href="../../dashboard-pages/color/colorsinpo.php" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Color Hunt</a>

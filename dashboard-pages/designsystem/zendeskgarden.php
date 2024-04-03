@@ -21,6 +21,7 @@ if (mysqli_num_rows($get_user) > 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="../../images/logow.png" type="image/x-icon">
     <link rel="stylesheet" href="../../dashboard-pages/dashboard-css/tools.css">
     <title>Zendesk Garden</title>
@@ -109,7 +110,7 @@ if (mysqli_num_rows($get_user) > 0) {
                     </button>
                     <ul id="color-system" class="hidden py-2 space-y-2">
                         <li>
-                            <a href="../dashboard-pages/color/adobecolor.php" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Adobe Color</a>
+                            <a href="../../dashboard-pages/color/adobecolor.php" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Adobe Color</a>
                         </li>
                         <li>
                             <a href="../../dashboard-pages/color/colorsinpo.php" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Color Hunt</a>
@@ -300,7 +301,7 @@ if (mysqli_num_rows($get_user) > 0) {
     <section class="p-4 sm:ml-64">
         <div class="tools-header">
             <div class="tools-content">
-                <h1 class="text-gray-900 dark:text-white"> Introducing GitHub Primer</h1>
+                <h1 class="text-gray-900 dark:text-white"> Introducing Zender Garden</h1>
                 <p class="text-gray-600 dark:text-gray-300"> it's the definitive guide to tools, standards, and best practices for building exceptional products at Zendesk. Whether you're a designer, developer, or product manager, Garden provides everything you need to succeed in creating impactful and user-friendly products.</p>
             </div>
             <div class="tools-image">
