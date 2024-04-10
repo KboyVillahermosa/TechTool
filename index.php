@@ -22,7 +22,7 @@ if (mysqli_num_rows($get_user) > 0) {
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
   <link rel="shortcut icon" href="images/logow.png" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style/indexss.css">
+  <link rel="stylesheet" href="style/indexsz.css">
   <title><?php echo $user['name']; ?> Techtool</title>
 </head>
 
@@ -74,7 +74,7 @@ if (mysqli_num_rows($get_user) > 0) {
             <a href="#" class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500" aria-current="page">Home</a>
           </li>
           <li>
-            <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+            <a href="generate.php" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Generate Rec</a>
           </li>
           <li>
             <a href="#" class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
@@ -111,11 +111,32 @@ if (mysqli_num_rows($get_user) > 0) {
     </div>
   </section>
 
+  <!--------------------------loader--------------------->
+  <section id="loader">
+    <div class="loader-container">
+      <div class="spinnerContainer">
+        <div class="spinner"></div>
+        <div class="loader">
+          <p>Welcom to Techtool</p>
+          <div class="words">
+            <span class="word">ignite</span>
+            <span class="word">empower</span>
+            <span class="word">thrive</span>
+            <span class="word">potential</span>
+            <span class="word">transform</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
 
 
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-  <script src="script/indexz.js"></script>
+  <script src="script/indexs.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,254 @@
+.container {
+  width: 100%;
+  max-width: 900px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #007bff;
+}
+
+/* Card styles */
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #007bff;
+  color: #fff;
+  padding: 15px;
+
+  border-radius: 8px 8px 0 0;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Star styles */
+.fa-star {
+  color: #ffc107;
+  font-size: 1.5em;
+}
+
+.star-light {
+  color: #dee2e6;
+}
+
+.text-warning {
+  color: #ffc107;
+}
+
+/* Review container styles */
+.review-container {
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #ccc;
+}
+
+.review {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.review-meta {
+  margin-bottom: 10px;
+}
+
+.review-meta span {
+  margin-right: 10px;
+}
+
+.review-content {
+  font-size: 16px;
+}
+
+.review-date {
+  color: #999;
+  font-size: 14px;
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-dialog {
+  margin: 10% auto;
+  width: 50%;
+  max-width: 500px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-header {
+  padding-bottom: 1px;
+}
+
+.modal-title {
+  margin-top: 0;
+}
+
+.modal-body {
+  padding-bottom: 20px;
+}
+
+.close {
+  float: right;
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.close:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.profile-initial {
+  width: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff; /* Blue background color */
+  border-radius: 50%;
+  margin-right: 10px;
+  position: relative; /* Add this line to fix the position */
+  transition: background-color 0.3s ease, border-radius 0.3s ease;
+  cursor: pointer; /* Add cursor pointer for hover effect */
+  /* Additional styles to make the initial circle more visually appealing */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+  overflow: hidden; /* Hide any content that may overflow */
+}
+
+.profile-initial:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+.profile-initial::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.profile-initial h3 {
+  margin: 0; /* Remove any margin to ensure the initial is properly centered */
+  line-height: 40px; /* Ensure the initial is vertically centered */
+}
+
+.profile-initial img {
+  width: 100%; /* Ensure the image fills the circle */
+  height: 100%; /* Ensure the image fills the circle */
+  object-fit: cover; /* Scale the image to cover the entire area */
+  border-radius: 50%; /* Ensure the image is also rounded */
+  transition: opacity 0.3s ease; /* Smooth transition for hover effect */
+  opacity: 0; /* Initially hide the image */
+}
+
+.profile-initial:hover img {
+  opacity: 1; /* Show the image on hover */
+}
+
+.profile-initial {
+  background-color: #007bff; /* Blue background color */
+}
+
+.progress-label-left {
+  float: left;
+}
+
+.progress-label-right {
+  float: right;
+}
+
+.progress {
+  height: 20px;
+  margin-bottom: 10px;
+  background-color: #f0f0f0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  background-color: #ffc107;
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.rating-drawer {
+  margin-top: 100px;
+}
+
+
+.rate-modal-header{
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding: 20px;
+}
