@@ -1,21 +1,6 @@
-<?php
-require 'config.php'; // Adjust the path as per your file structure
-if (!isset($_SESSION['login_id'])) {
-  header('Location: logins.php');
-  exit;
-}
-$id = $_SESSION['login_id'];
-$get_user = mysqli_query($db_connection, "SELECT * FROM `users` WHERE `google_id`='$id'");
-if (mysqli_num_rows($get_user) > 0) {
-  $user = mysqli_fetch_assoc($get_user);
-} else {
-  header('Location: logout.php');
-  exit;
-}
-?>
+
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -25,9 +10,8 @@ if (mysqli_num_rows($get_user) > 0) {
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="style/indexs.css">
-  <title><?php echo $user['name']; ?> Techtool</title>
+  <title>Techtool</title>
 </head>
-
 <body class="bg-white dark:bg-gray-800">
   <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
@@ -37,43 +21,16 @@ if (mysqli_num_rows($get_user) > 0) {
       </a>
       <div class="flex items-center md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
         <button type="button"
-          class="flex text-sm bg-gray-800 rounded-full md:me-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+          class="flex text-sm rounded-full"
           id="user-menu-button" aria-expanded="false" data-dropdown-toggle="user-dropdown"
           data-dropdown-placement="bottom">
           <span class="sr-only">Open user menu</span>
           <div class="avatar-container">
-            <img class="h-8 w-8 rounded-full" src="<?php echo $user['profile_image']; ?>"
-              alt="<?php echo $user['name']; ?>">
+          <i class="fa-solid fa-user text-gray-900 dark:text-white text-3xl font-extrabold mb-2"></i>
           </div>
         </button>
         <!-- Dropdown menu -->
-        <div
-          class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
-          id="user-dropdown">
-          <div class="px-4 py-3">
-            <span class="block text-sm text-gray-900 dark:text-white"><?php echo $user['name']; ?></span>
-            <span class="block text-sm  text-gray-500 truncate dark:text-gray-400"><?php echo $user['email']; ?></span>
-          </div>
-          <ul class="py-2" aria-labelledby="user-menu-button">
-            <li>
-              <a href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Dashboard</a>
-            </li>
-            <li>
-              <a href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Settings</a>
-            </li>
-            <li>
-              <a href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Earnings</a>
-            </li>
-            <li>
-              <a href="logout.php"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white">Sign
-                out</a>
-            </li>
-          </ul>
-        </div>
+  
         <button data-collapse-toggle="navbar-user" type="button"
           class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
           aria-controls="navbar-user" aria-expanded="false">
@@ -128,21 +85,17 @@ if (mysqli_num_rows($get_user) > 0) {
     <div class="header-title">
       <div class="header-content">
         <h1
-          class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white p-2">
+          class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
           Rediscover growth and innovation with <span class="text-blue-600 dark:text-blue-500">TechTool</span> </h1>
         <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 mb-5">Your go-to resource for
           improving your computer science and IT abilities. Our mission at TechTool is to give people access to the
           information and resources they need to succeed in the rapidly evolving IT industry.</p>
-        <a href="dashboard-pages/dashboard.php">
-          <button type="button"
+          <button type="button" data-modal-target="popup-modal" data-modal-toggle="popup-modal"
             class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Get
             Started</button>
-        </a>
-        <a href="#web-resources">
-          <button type="button"
+          <button type="button" data-modal-target="popup-modal" data-modal-toggle="popup-modal"
             class="text-gray-900 hover:text-white border border-gray-800 hover:bg-gray-900 focus:ring-4 focus:outline-none focus:ring-gray-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2 dark:border-gray-600 dark:text-gray-400 dark:hover:text-white dark:hover:bg-gray-600 dark:focus:ring-gray-800">
             Explore Resources</button>
-        </a>
       </div>
     </div>
   </section>
@@ -167,36 +120,25 @@ if (mysqli_num_rows($get_user) > 0) {
   </section>
   <!------------------------------------- alerrrtt ------------------------------------>
   <section>
-    <div id="sticky-banner" tabindex="-1"
-      class="fixed top-0 start-0 z-50 flex justify-between w-full p-4 border-b border-gray-200 bg-gray-50 dark:bg-gray-700 dark:border-gray-600">
-      <div class="flex items-center mx-auto">
-        <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">
-          <span
-            class="inline-flex p-1 me-3 bg-gray-200 rounded-full dark:bg-gray-600 w-6 h-6 items-center justify-center flex-shrink-0">
-            <svg class="w-3 h-3 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg"
-              fill="currentColor" viewBox="0 0 18 19">
-              <path
-                d="M15 1.943v12.114a1 1 0 0 1-1.581.814L8 11V5l5.419-3.871A1 1 0 0 1 15 1.943ZM7 4H2a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2v5a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2V4ZM4 17v-5h1v5H4ZM16 5.183v5.634a2.984 2.984 0 0 0 0-5.634Z" />
-            </svg>
-            <span class="sr-only">Light bulb</span>
-          </span>
-          <span>Feeling unsure about what kind of website you're looking for? Let <a href="generate.php"
-              class="inline font-medium text-blue-600 underline dark:text-blue-500 underline-offset-2 decoration-600 dark:decoration-500 decoration-solid hover:no-underline">
-              TechTool Recommendations </a> come to your rescue! Just tell us your interests, and we'll match you with
-            websites that align perfectly with your preferences. </span>
-        </p>
-      </div>
-      <div class="flex items-center">
-        <button data-dismiss-target="#sticky-banner" type="button"
-          class="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
-          <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-              d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
-          </svg>
-          <span class="sr-only">Close banner</span>
-        </button>
-      </div>
+   
+
+<div id="marketing-banner" tabindex="-1" class="fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600">
+    <div class="flex flex-col items-start mb-3 me-4 md:items-center md:flex-row md:mb-0">
+        <a href="https://flowbite.com/" class="flex items-center mb-2 border-gray-200 md:pe-4 md:me-4 md:border-e md:mb-0 dark:border-gray-600">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 me-2" alt="Flowbite Logo">
+            <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+        </a>
+        <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">Build websites even faster with components on top of Tailwind CSS</p>
     </div>
+    <div class="flex items-center flex-shrink-0">
+        <a href="login.php" class="px-5 py-2 me-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Sign in</a>
+        <button data-dismiss-target="#marketing-banner" type="button" class="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
+          
+        </button>
+    </div>
+</div>
+
+
   </section>
 
   <!--------------------------------------------------- resources content ----------------------------------------------------->
@@ -284,7 +226,7 @@ if (mysqli_num_rows($get_user) > 0) {
   </section>
 
   <!----------------------------------------------- web resources --------------------------------------------->
-  <section id="web-resources">
+  <section>
     <div class="webresources-title">
       <h1 class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">Web Resources</h1>
     </div>
@@ -292,7 +234,7 @@ if (mysqli_num_rows($get_user) > 0) {
       <div class="web-resources-content">
         <a href="#"
           class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-          <img class="object-cover  md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+          <img class="object-cover w-full   md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
             src="images/adobe.png" alt="">
           <div class="flex flex-col justify-between p-2 leading-normal">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Adobe Color</h5>
@@ -370,8 +312,35 @@ if (mysqli_num_rows($get_user) > 0) {
 
     </div>
   </section>
+<!----------------------------------------- alert -------------------------------------------------->
+  <section>
+<div id="popup-modal" tabindex="-1" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <div class="relative p-4 w-full max-w-md max-h-full">
+        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+            <button type="button" class="absolute top-3 end-2.5 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="popup-modal">
+                <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                </svg>
+                <span class="sr-only">Close modal</span>
+            </button>
+            <div class="p-4 md:p-5 text-center">
+                <svg class="mx-auto mb-4 text-gray-400 w-12 h-12 dark:text-gray-200" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 11V6m0 8h.01M19 10a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/>
+                </svg>
+                <h3 class="mb-5 text-lg font-normal text-gray-500 dark:text-gray-400">Oh no, before you can use the tools, you must sign in.</h3>
+                <a href="login.php">
+                <button data-modal-hide="popup-modal" type="button" class="text-white bg-red-600 hover:bg-red-800 focus:ring-4 focus:outline-none focus:ring-red-300 dark:focus:ring-red-800 font-medium rounded-lg text-sm inline-flex items-center px-5 py-2.5 text-center">
+                    Sign in
+                </button>
+                </a>
+                <button data-modal-hide="popup-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">No, cancel</button>
+            </div>
+        </div>
+    </div>
+</div>
 
- 
+
+  </section>
 
 
 
@@ -381,9 +350,22 @@ if (mysqli_num_rows($get_user) > 0) {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   <script src="script/indexs.js"></script>
   <script>
-    setTimeout(function () {
-      document.getElementById("sticky-banner").style.display = "none";
-    }, 7000); // 5000 milliseconds = 5 seconds
+    // Function to toggle the display of the marketing banner
+    function toggleMarketingBanner() {
+      var banner = document.getElementById("marketing-banner");
+      banner.classList.toggle("hidden");
+    }
+
+    // Attach event listeners to elements triggering the banner
+    document.addEventListener("DOMContentLoaded", function () {
+      // Example: Clicking a button triggers the banner
+      var buttons = document.querySelectorAll("button");
+      buttons.forEach(function (button) {
+        button.addEventListener("click", toggleMarketingBanner);
+      });
+
+      // Add event listeners to other elements as needed
+    });
   </script>
 </body>
 

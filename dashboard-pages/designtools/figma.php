@@ -25,7 +25,6 @@ if (mysqli_num_rows($get_user) > 0) {
     <link rel="stylesheet" href="../../dashboard-pages/dashboard-css/tools.css">
     <title>Figma</title>
 </head>
-
 <body class="bg-white dark:bg-gray-800">
     <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">

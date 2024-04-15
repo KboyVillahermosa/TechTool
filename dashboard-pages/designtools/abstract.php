@@ -302,7 +302,7 @@ if (mysqli_num_rows($get_user) > 0) {
     <section class="p-4 sm:ml-64">
         <div class="tools-header">
             <div class="tools-content">
-                <h1 class="text-gray-900 dark:text-white"> Introducing Overflow</h1>
+                <h1 class="text-gray-900 dark:text-white"> Introducing Abstract </h1>
                 <p class="text-gray-600 dark:text-gray-300"> it's a platform that empowers designers to create interactive user flows, stunning design presentations, and step-by-step walkthroughs that captivate and engage audiences like never before. Whether you're conducting synchronous or asynchronous design critiques, Overflow has everything you need to bring your ideas to life and communicate them effectively.</p>
             </div>
             <div class="tools-image">

@@ -26,6 +26,7 @@ else{
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="../../images/logow.png" type="image/x-icon">
     <link rel="stylesheet" href="../../dashboard-pages/dashboard-css/tools.css">
+    <link rel="stylesheet" href="../../dashboard-pages/dashboard-css/ratess.css">
     <title>Coolorsinpo</title>
 </head>
 
@@ -340,8 +341,8 @@ else{
                 <p class="text-gray-600 dark:text-gray-300"> With the Colorsinspo plugin, you can supercharge your design workflow and accelerate the process of choosing colors for your projects. Here's how Colorsinspo can help you get more done</p>
             </div>
             <div class="tools-image">
-                <img src="../dash-images/colorhunt.png" alt="">
-                <a href="https://coolors.co" target="_blank">
+                <img src="../dash-images/colorsinpo.png" alt="">
+                <a href="https://colorsinspo.com/?ref=inspectresource.com" target="_blank">
                     <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"> Visit Website</button>
                 </a>
             </div>
@@ -368,10 +369,160 @@ else{
         </div>
     </section>
 
+    <section>
+                <div class="rate-modal-header">
+                    <div class="rate-modal-content">
+                        <p class="text-gray-600 dark:text-gray-300 mb-3">Does this end up being helpful? </p>
+                        <button data-modal-target="default-modal" data-modal-toggle="default-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+                            Give it a rating
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Main modal -->
+                <div id="default-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+                    <div class="relative p-4 w-full w-900 max-h-full">
+                        <!-- Modal content -->
+                        <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                            <!-- Modal header -->
+                            <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                                <h3 class="text-xl font-semibold text-gray-900 dark:text-white">
+                                    Terms of Service
+                                </h3>
+                                <button type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-hide="default-modal">
+                                    <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6" />
+                                    </svg>
+                                    <span class="sr-only">Close modal</span>
+                                </button>
+                            </div>
+                            <!-- Modal body -->
+                            <div class="rate-header p-4">
+                                <div class="rate-content">
+                                    <div class="containers">
+                                        <h1 class="mt-5 mb-5">Review & Rating in Adobe Color</h1>
+                                        <div class="card">
+                                            <div class="card-header text-xl font-semibold text-gray-900 dark:text-white">Sample Product</div>
+                                            <div class="card-body">
+                                                <div class="row">
+                                                    <div class="col-sm-4 text-center">
+                                                        <h1 class="text-warning mt-4 mb-4">
+                                                            <b><span id="average_rating">0.0</span> / 5</b>
+                                                        </h1>
+                                                        <div class="mb-3">
+                                                            <i class="fas fa-star star-light mr-1 main_star"></i>
+                                                            <i class="fas fa-star star-light mr-1 main_star"></i>
+                                                            <i class="fas fa-star star-light mr-1 main_star"></i>
+                                                            <i class="fas fa-star star-light mr-1 main_star"></i>
+                                                            <i class="fas fa-star star-light mr-1 main_star"></i>
+                                                        </div>
+                                                        <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-5"><span id="total_review" class="text-xl font-semibold text-gray-900 dark:text-white">0</span> Review</h3>
+                                                    </div>
+                                                    <div class="col-sm-4">
+                                                        <p>
+                                                        <div class="progress-label-left text-gray-600 dark:text-gray-300"><b>5</b> <i class="fas fa-star text-warning"></i></div>
+
+                                                        <div class="progress-label-right text-gray-600 dark:text-gray-300">(<span id="total_five_star_review">0</span>)</div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="five_star_progress"></div>
+                                                        </div>
+                                                        </p>
+                                                        <p>
+                                                        <div class="progress-label-left text-gray-600 dark:text-gray-300"><b>4</b> <i class="fas fa-star text-warning"></i></div>
+
+                                                        <div class="progress-label-right text-gray-600 dark:text-gray-300">(<span id="total_four_star_review">0</span>)</div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="four_star_progress"></div>
+                                                        </div>
+                                                        </p>
+                                                        <p>
+                                                        <div class="progress-label-left text-gray-600 dark:text-gray-300"><b>3</b> <i class="fas fa-star text-warning"></i></div>
+
+                                                        <div class="progress-label-right text-gray-600 dark:text-gray-300">(<span id="total_three_star_review">0</span>)</div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="three_star_progress"></div>
+                                                        </div>
+                                                        </p>
+                                                        <p>
+                                                        <div class="progress-label-left text-gray-600 dark:text-gray-300"><b>2</b> <i class="fas fa-star text-warning"></i></div>
+
+                                                        <div class="progress-label-right text-gray-600 dark:text-gray-300">(<span id="total_two_star_review">0</span>)</div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="two_star_progress"></div>
+                                                        </div>
+                                                        </p>
+                                                        <p>
+                                                        <div class="progress-label-left text-gray-600 dark:text-gray-300"><b>1</b> <i class="fas fa-star text-warning"></i></div>
+
+                                                        <div class="progress-label-right text-gray-600 dark:text-gray-300">(<span id="total_one_star_review">0</span>)</div>
+                                                        <div class="progress">
+                                                            <div class="progress-bar bg-warning" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" id="one_star_progress"></div>
+                                                        </div>
+                                                        </p>
+                                                        <!-- Other star ratings -->
+                                                    </div>
+                                                    <div class="col-sm-4 text-center">
+                                                        <h3 class="mt-4 mb-3  text-xl font-semibold text-gray-900 dark:text-white">Write Review Here</h3>
+                                                        <button type="button" name="add_review" id="add_review" class="btn btn-primary">Review</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-5" id="review_content"></div>
+                                    </div>
+                                    <div id="review_modal" class="modal" style="display: none;">
+                                        <div class="modal-dialog">
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <h5 class="modal-title">Submit Review</h5>
+                                                    <span class="close" onclick="hideModal()">&times;</span>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <h4 class="text-center mt-2 mb-4">
+                                                        <i class="fas fa-star star-light submit_star mr-1" id="submit_star_1" data-rating="1"></i>
+                                                        <i class="fas fa-star star-light submit_star mr-1" id="submit_star_2" data-rating="2"></i>
+                                                        <i class="fas fa-star star-light submit_star mr-1" id="submit_star_3" data-rating="3"></i>
+                                                        <i class="fas fa-star star-light submit_star mr-1" id="submit_star_4" data-rating="4"></i>
+                                                        <i class="fas fa-star star-light submit_star mr-1" id="submit_star_5" data-rating="5"></i>
+                                                    </h4>
+                                                    <div class="form-group">
+                                                        <div class="rounded-circle"></div>
+                                                        <input type="text" name="user_name" id="user_name" class="form-control" placeholder="Enter Your Name" />
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <textarea name="user_review" id="user_review" class="form-control" placeholder="Type Review Here"></textarea>
+                                                    </div>
+                                                    <div class="form-group text-center mt-4">
+                                                        <button type="button" class="btn btn-primary" id="save_review">Submit</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!-- Modal footer -->
+                            <div class="flex items-center p-4 md:p-5 border-t border-gray-200 rounded-b dark:border-gray-600">
+                                <button data-modal-hide="default-modal" type="button" class="py-2.5 px-5 ms-3 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-100 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+    
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../../dashboard-pages/dashboard-js/dashboard.js"></script>
+    <script src="../../dashboard-pages/dashboard-js/colorsinpo-rating.js"></script>
+
 </body>
 
 </html>

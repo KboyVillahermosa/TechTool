@@ -340,8 +340,8 @@ if (mysqli_num_rows($get_user) > 0) {
                 <p class="text-gray-600 dark:text-gray-300"> Coolors is your ultimate destination for effortless color exploration and palette generation. Whether you're a seasoned designer or just starting out, Coolors offers a wealth of tools and resources to inspire your creativity and elevate your design projects.</p>
             </div>
             <div class="tools-image">
-                <img src="../dash-images/colorhunt.png" alt="">
-                <a href="https://coolors.co" target="_blank">
+                <img src="../dash-images/coolors.png" alt="">
+                <a href="https://coolors.co/?ref=inspectresource.com" target="_blank">
                     <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"> Visit Website</button>
                 </a>
             </div>
@@ -371,6 +371,7 @@ if (mysqli_num_rows($get_user) > 0) {
 
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="../../dashboard-pages/dashboard-js/dashboard.js"></script>
 </body>
 
