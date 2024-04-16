@@ -24,7 +24,7 @@ if (mysqli_num_rows($get_user) > 0) {
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style/indexs.css">
+  <link rel="stylesheet" href="style/indexz.css">
   <title><?php echo $user['name']; ?> Techtool</title>
 </head>
 
@@ -99,11 +99,11 @@ if (mysqli_num_rows($get_user) > 0) {
           </li>
           <li>
             <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
           </li>
           <li>
             <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">FQA</a>
           </li>
           <li>
             <button id="theme-toggle" type="button"
@@ -148,19 +148,15 @@ if (mysqli_num_rows($get_user) > 0) {
   </section>
 
   <!--------------------------loader--------------------->
-  <section id="loader">
-    <div class="loader-container">
-      <div class="spinnerContainer">
-        <div class="spinner"></div>
-        <div class="loader">
-          <p>Welcom to Techtool</p>
-          <div class="words">
-            <span class="word">ignite</span>
-            <span class="word">empower</span>
-            <span class="word">thrive</span>
-            <span class="word">potential</span>
-            <span class="word">transform</span>
-          </div>
+  <section>
+    <div class="loader-container bg-white dark:bg-gray-800">
+      <div id="page">
+        <div id="container">
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="h3" class="text-gray-900 dark:text-white"">TechTool</div>
         </div>
       </div>
     </div>

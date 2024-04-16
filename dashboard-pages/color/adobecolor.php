@@ -26,7 +26,6 @@ if (mysqli_num_rows($get_user) > 0) {
     <link rel="stylesheet" href="../../dashboard-pages/dashboard-css/ratess.css">
     <title>Adobe Color</title>
 </head>
-
 <body class="bg-white dark:bg-gray-800">
     <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
         <div class="px-3 py-3 lg:px-5 lg:pl-3">
@@ -363,6 +362,7 @@ if (mysqli_num_rows($get_user) > 0) {
                 <p class="text-gray-600 dark:text-gray-300"> <span class="span-description">Educational Resources: </span> Expand your knowledge and enhance your skills with Adobe Color's educational resources and tutorials. Learn about color theory, best practices in color usage, and advanced techniques to level up your design game and create visually stunning compositions.</p>
             </div>
         </div>
+        
         <section>
             <!-- drawer init and toggle -->
             <section>
@@ -401,6 +401,7 @@ if (mysqli_num_rows($get_user) > 0) {
                                     <div class="containers">
                                         <h1 class="mt-5 mb-5">Review & Rating in Adobe Color</h1>
                                         <div class="card">
+                                            
                                             <div class="card-header text-xl font-semibold text-gray-900 dark:text-white">Sample Product</div>
                                             <div class="card-body">
                                                 <div class="row">
@@ -417,7 +418,8 @@ if (mysqli_num_rows($get_user) > 0) {
                                                         </div>
                                                         <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-5"><span id="total_review" class="text-xl font-semibold text-gray-900 dark:text-white">0</span> Review</h3>
                                                     </div>
-                                                    <div class="col-sm-4">
+                                    
+                                                    <div class="yo col-sm-4">
                                                         <p>
                                                         <div class="progress-label-left text-gray-600 dark:text-gray-300"><b>5</b> <i class="fas fa-star text-warning"></i></div>
 
@@ -499,6 +501,7 @@ if (mysqli_num_rows($get_user) > 0) {
                                         </div>
                                     </div>
                                 </div>
+                    
                             </div>
 
 

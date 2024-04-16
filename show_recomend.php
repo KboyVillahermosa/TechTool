@@ -1,31 +1,33 @@
 <?php
 require 'config.php'; // Adjust the path as per your file structure
 if (!isset($_SESSION['login_id'])) {
-    header('Location: createacc.php');
-    exit;
+  header('Location: createacc.php');
+  exit;
 }
 $id = $_SESSION['login_id'];
 $get_user = mysqli_query($db_connection, "SELECT * FROM `users` WHERE `google_id`='$id'");
 if (mysqli_num_rows($get_user) > 0) {
-    $user = mysqli_fetch_assoc($get_user);
+  $user = mysqli_fetch_assoc($get_user);
 } else {
-    header('Location: logout.php');
-    exit;
+  header('Location: logout.php');
+  exit;
 }
 
 $recommendations = isset($_SESSION['recommendations']) ? $_SESSION['recommendations'] : [];
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="style/generatez.css">
-    <title>Display Recommendations</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="style/generates.css">
+  <title>Display Recommendations</title>
 </head>
+
 <body class="bg-white dark:bg-gray-800">
-<nav class="bg-white border-gray-200 dark:bg-gray-900">
+  <nav class="bg-white border-gray-200 dark:bg-gray-900">
     <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
       <a href="index.php" class="flex items-center space-x-3 rtl:space-x-reverse">
         <img src="images/logow.png" class="h-8" alt="Flowbite Logo" />
@@ -120,29 +122,44 @@ $recommendations = isset($_SESSION['recommendations']) ? $_SESSION['recommendati
       </div>
     </div>
   </nav>
-    <div>
-        <h2 class="text-lg font-normal text-gray-500 dark:text-gray-400 ">Recommendations</h2>
-        <ul>
-            <?php 
-            // Check if recommendations are set in the session
-            if (isset($_SESSION['recommendations']) && !empty($_SESSION['recommendations'])) {
-                foreach ($_SESSION['recommendations'] as $recommendation) {
-                    echo ' <div class="">
+  <div>
+    <h2 class="text-lg font-normal text-gray-500 dark:text-gray-400 ">Recommendations</h2>
+    <ul>
+      <?php
+      // Check if recommendations are set in the session
+      if (isset($_SESSION['recommendations']) && !empty($_SESSION['recommendations'])) {
+        foreach ($_SESSION['recommendations'] as $recommendation) {
+          echo ' <div class="">
                            <div class="">
                            <li class="text-lg font-normal text-gray-500 dark:text-gray-400 ">' . $recommendation . '</li>
                            </div>
                            </div>
                     ';
-                }
-            } else {
-                echo '<li class="">No recommendations available</li>';
-            }
-            ?>
-        </ul>
-        <a href="generate.php" class="text-lg font-normal text-gray-500 dark:text-gray-400 ">generate</a>
-    </div>
+        }
+      } else {
+        echo '<li class="">No recommendations available</li>';
+      }
+      ?>
+    </ul>
+    <a href="generate.php" class="text-lg font-normal text-gray-500 dark:text-gray-400 ">generate</a>
+  </div>
+  <section>
+    <div class="loader-container bg-white dark:bg-gray-800">
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-    <script src="script/indexs.js"></script>
+      <div id="page">
+        <div id="container">
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="h3" class="text-gray-900 dark:text-white"">TechTool</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+  <script src="script/indexs.js"></script>
 </body>
+
 </html>

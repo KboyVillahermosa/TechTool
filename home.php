@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style/indexs.css">
+  <link rel="stylesheet" href="style/indexz.css">
   <title>Techtool</title>
 </head>
 <body class="bg-white dark:bg-gray-800">
@@ -56,11 +56,11 @@
           </li>
           <li>
             <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
           </li>
           <li>
             <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">FQA</a>
           </li>
           <li>
             <button id="theme-toggle" type="button"
@@ -87,7 +87,7 @@
         <h1
           class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
           Rediscover growth and innovation with <span class="text-blue-600 dark:text-blue-500">TechTool</span> </h1>
-        <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 mb-5">Your go-to resource for
+        <p class="text-lg font-normal text-gray-500 lg:text-xl dark:text-gray-400 mb-5 p-3">Your go-to resource for
           improving your computer science and IT abilities. Our mission at TechTool is to give people access to the
           information and resources they need to succeed in the rapidly evolving IT industry.</p>
           <button type="button" data-modal-target="popup-modal" data-modal-toggle="popup-modal"
@@ -101,44 +101,35 @@
   </section>
 
   <!--------------------------loader--------------------->
-  <section id="loader">
-    <div class="loader-container">
-      <div class="spinnerContainer">
-        <div class="spinner"></div>
-        <div class="loader">
-          <p>Welcom to Techtool</p>
-          <div class="words">
-            <span class="word">ignite</span>
-            <span class="word">empower</span>
-            <span class="word">thrive</span>
-            <span class="word">potential</span>
-            <span class="word">transform</span>
-          </div>
+  <section>
+    <div class="loader-container bg-white dark:bg-gray-800">
+      <div id="page">
+        <div id="container">
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="ring"></div>
+          <div id="h3" class="text-gray-900 dark:text-white"">TechTool</div>
         </div>
       </div>
     </div>
   </section>
   <!------------------------------------- alerrrtt ------------------------------------>
   <section>
-   
-
 <div id="marketing-banner" tabindex="-1" class="fixed z-50 flex flex-col md:flex-row justify-between w-[calc(100%-2rem)] p-4 -translate-x-1/2 bg-white border border-gray-100 rounded-lg shadow-sm lg:max-w-7xl left-1/2 top-6 dark:bg-gray-700 dark:border-gray-600">
     <div class="flex flex-col items-start mb-3 me-4 md:items-center md:flex-row md:mb-0">
         <a href="https://flowbite.com/" class="flex items-center mb-2 border-gray-200 md:pe-4 md:me-4 md:border-e md:mb-0 dark:border-gray-600">
-            <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 me-2" alt="Flowbite Logo">
-            <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">Flowbite</span>
+            <img src="images/logow.png" class="h-6 me-2" alt="Flowbite Logo">
+            <span class="self-center text-lg font-semibold whitespace-nowrap dark:text-white">TechTool</span>
         </a>
-        <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400">Build websites even faster with components on top of Tailwind CSS</p>
+        <p class="flex items-center text-sm font-normal text-gray-500 dark:text-gray-400"> Sign in first before you can access the website</p>
     </div>
     <div class="flex items-center flex-shrink-0">
         <a href="login.php" class="px-5 py-2 me-2 text-xs font-medium text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Sign in</a>
-        <button data-dismiss-target="#marketing-banner" type="button" class="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white">
-          
+        <button data-dismiss-target="#marketing-banner" type="button" class="flex-shrink-0 inline-flex justify-center w-7 h-7 items-center text-gray-400 hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 dark:hover:bg-gray-600 dark:hover:text-white"> 
         </button>
     </div>
 </div>
-
-
   </section>
 
   <!--------------------------------------------------- resources content ----------------------------------------------------->

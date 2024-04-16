@@ -1,0 +1,157 @@
+
+.recomend-header{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.recomend-content{
+    width: 100%;
+    max-width: 1200px;
+}
+
+
+.generate-header{
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.generate-content{
+    width: 100%;
+    max-width: 800px;
+}
+
+.generate-image{
+    width: 100%;
+    max-width: 500px;
+}
+.generate-image img{
+    width: 100%;
+    max-width: 400px;
+}
+
+.web-design{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.web-design-content{
+    width: 100%;
+    max-width: 400px;
+}
+.web-design-content img{
+    width: 100%;
+    max-width: 400px;
+    height: 30vh;
+}
+
+.loader-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+#page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  #container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  #h3 {
+    font-size: clamp(0.9375rem, 0.1563rem + 2.5vw, 1.5625rem);  
+  }
+  
+  #ring {
+    width: 190px;
+    height: 190px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: absolute;
+  }
+  
+  #ring:nth-child(1) {
+    border-bottom: 8px solid rgb(240, 42, 230);
+    animation: rotate1 2s linear infinite;
+  }
+  
+  @keyframes rotate1 {
+    from {
+      transform: rotateX(50deg) rotateZ(110deg);
+    }
+  
+    to {
+      transform: rotateX(50deg) rotateZ(470deg);
+    }
+  }
+  
+  #ring:nth-child(2) {
+    border-bottom: 8px solid rgb(240, 19, 67);
+    animation: rotate2 2s linear infinite;
+  }
+  
+  @keyframes rotate2 {
+    from {
+      transform: rotateX(20deg) rotateY(50deg) rotateZ(20deg);
+    }
+  
+    to {
+      transform: rotateX(20deg) rotateY(50deg) rotateZ(380deg);
+    }
+  }
+  
+  #ring:nth-child(3) {
+    border-bottom: 8px solid rgb(3, 170, 170);
+    animation: rotate3 2s linear infinite;
+  }
+  
+  @keyframes rotate3 {
+    from {
+      transform: rotateX(40deg) rotateY(130deg) rotateZ(450deg);
+    }
+  
+    to {
+      transform: rotateX(40deg) rotateY(130deg) rotateZ(90deg);
+    }
+  }
+  
+  #ring:nth-child(4) {
+    border-bottom: 8px solid rgb(207, 135, 1);
+    animation: rotate4 2s linear infinite;
+  }
+  
+  @keyframes rotate4 {
+    from {
+      transform: rotateX(70deg) rotateZ(270deg);
+    }
+  
+    to {
+      transform: rotateX(70deg) rotateZ(630deg);
+    }
+  }
+  /* Improving visualization in light mode */
+
+
+  

@@ -60,10 +60,56 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
 
     // Generate recommendations based on user inputs
     if ($interests == 'Frontend') {
-        $recommendations[] = "Check out Codecademy for interactive frontend development courses.";
+        $recommendations[] = '
+                              <div class="web-design">
+                              <div class="web-design-content">
+                              <h1 class="text-gray-900 dark:text-white">Code Academy</h1>
+                              <a href="./dashboard-pages/database/datacamp.php">
+                              <img src="./dashboard-pages/dash-images/codeacademy.png" class="">
+                              <p class="text-gray-900 dark:text-white"> Codecademy is an online interactive platform that offers free and paid coding classes in various programming languages and web development technologies. </p>
+                              </a>
+                             </div>
+                             <div class="web-design-content">
+                              <h1 class="text-gray-900 dark:text-white">Abstract</h1>
+                              <a class="/dashboard-pages/designtools/abstract.php">
+                              <img src="./dashboard-pages/dash-images/abstract.png">
+                              </a>
+                              <p class="text-gray-900 dark:text-white">its a platform that empowers designers to create interactive user flows</p>
+                             </div>
+                             <div class="web-design-content">
+                              <h1 class="text-gray-900 dark:text-white">Lottie</h1>
+                              <a href="./dashboard-pages/designtools/lottie.php">
+                              <img src="./dashboard-pages/dash-images/lottie.png">
+                              </a>
+                              <p class="text-gray-900 dark:text-white">revolutionizing how apps engage users with dynamic and captivating visual experiences.</p>
+                             </div>
+                             </div>
+                             ';
         $recommendations[] = "Explore freeCodeCamp for a wide range of frontend projects and challenges.";
     } elseif ($interests == 'Backend') {
-        $recommendations[] = "Try The Odin Project for comprehensive backend development tutorials.";
+        $recommendations[] = '<div class="web-design">
+                              <div class="web-design-content">
+                              <h1 class="text-gray-900 dark:text-white">Figma</h1>
+                              <a href="./dashboard-pages/database/datacamp.php">
+                              <img src="./dashboard-pages/dash-images/datacamp.png" class="">
+                              <p class="text-gray-900 dark:text-white"> Data Camp is your gateway to unlocking the immense potential of data and artificial intelligence through comprehensive learning resources.</p>
+                              </a>
+                             </div>
+                             <div class="web-design-content">
+                              <h1 class="text-gray-900 dark:text-white">Abstract</h1>
+                              <a class="/dashboard-pages/designtools/abstract.php">
+                              <img src="./dashboard-pages/dash-images/abstract.png">
+                              </a>
+                              <p class="text-gray-900 dark:text-white">its a platform that empowers designers to create interactive user flows</p>
+                             </div>
+                             <div class="web-design-content">
+                              <h1 class="text-gray-900 dark:text-white">Lottie</h1>
+                              <a href="./dashboard-pages/designtools/lottie.php">
+                              <img src="./dashboard-pages/dash-images/lottie.png">
+                              </a>
+                              <p class="text-gray-900 dark:text-white">revolutionizing how apps engage users with dynamic and captivating visual experiences.</p>
+                             </div>
+                             </div>';
         $recommendations[] = "Check out Node.js official documentation for learning backend JavaScript.";
     } elseif ($interests == 'Full Stack') {
         $recommendations[] = '<div class="recomend-header">
@@ -172,7 +218,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/indexss.css">
-    <link rel="stylesheet" href="style/generatez.css">
+    <link rel="stylesheet" href="style/generates.css">
     <title>Generate recommendation</title>
 </head>
 
