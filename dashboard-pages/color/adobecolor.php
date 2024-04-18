@@ -519,7 +519,7 @@ if (mysqli_num_rows($get_user) > 0) {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="../../dashboard-pages/dashboard-js/dashboard.js"></script>
-        <script src="../../dashboard-pages/dashboard-js/rate.js"></script>
+        <script src="../../dashboard-pages/dashboard-js/ratez.js"></script>
         <script>
 
         </script>

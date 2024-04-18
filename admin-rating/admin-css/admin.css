@@ -1,0 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.rating-header{
+    margin-top: 80px;
+}
+
+
+.delete{
+    background: red;
+    padding: 10px;
+    border-radius: 8px;
+    color: white;
+}

@@ -1,0 +1,17 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.user-header{
+    margin-top: 80px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.user-content{
+    width: 100%;
+    max-width: 1200px;
+}
+
