@@ -335,7 +335,7 @@ if (mysqli_num_rows($get_user) > 0) {
     <section class="p-4 sm:ml-64">
         <div class="tools-header">
             <div class="tools-content">
-                <h1 class="text-gray-900 dark:text-white"> Introducing MySQL Documentation</h1>
+                <h1 class="text-gray-900 dark:text-white"> Introducing SQL ZOO</h1>
                 <p class="text-gray-600 dark:text-gray-300"> Explore the wealth of knowledge offered by the official MySQL Documentation, available on our platform. Dive deep into the intricacies of MySQL, the world's most popular open-source relational database management system.</p>
             </div>
             <div class="tools-image">

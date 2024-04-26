@@ -336,7 +336,7 @@ if (mysqli_num_rows($get_user) > 0) {
         <div class="tools-header">
             <div class="tools-content">
                 <h1 class="text-gray-900 dark:text-white"> Introducing Redash</h1>
-                <p class="text-gray-600 dark:text-gray-300"> Are you drowning in a sea of data and struggling to make sense of it all? Say hello to Redash—a powerful data visualization and dashboarding tool that empowers you to connect, query, and visualize your data with ease.</p>
+                <p class="text-gray-600 dark:text-gray-300"> Are you drowning in a sea of data and struggling to make sense of it all? Say hello to Redash a powerful data visualization and dashboarding tool that empowers you to connect, query, and visualize your data with ease.</p>
             </div>
             <div class="tools-image">
                 <img src="../dash-images/redash.png" alt="">

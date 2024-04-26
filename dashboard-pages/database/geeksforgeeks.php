@@ -334,7 +334,7 @@ if (mysqli_num_rows($get_user) > 0) {
     <section class="p-4 sm:ml-64">
         <div class="tools-header">
             <div class="tools-content">
-                <h1 class="text-gray-900 dark:text-white"> Introducing DB Diagram</h1>
+                <h1 class="text-gray-900 dark:text-white"> Introducing Geeks for Geeks</h1>
                 <p class="text-gray-600 dark:text-gray-300"> dbdiagram.io is a user-friendly, free online database diagramming tool that simplifies the process of designing your database schema. It supports a variety of popular database systems such as MySQL, PostgreSQL, SQLite, and more.</p>
             </div>
             <div class="tools-image">

@@ -15,6 +15,7 @@ $client->setClientSecret('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');
 // Construct the redirect URI dynamically based on the current file's location
 $redirectUri = 'http://' . $_SERVER['HTTP_HOST'] . $_SERVER['PHP_SELF'];
 $client->setRedirectUri($redirectUri);
+
 // Adding those scopes which we want to get (email & profile Information)
 $client->addScope("email");
 $client->addScope("profile");
