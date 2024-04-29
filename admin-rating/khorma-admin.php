@@ -7,6 +7,13 @@ if (!isset($_SESSION['login_id'])) {
     exit;
 }
 
+//rating count
+$query_total_ratings_khorma = "SELECT COUNT(*) as total_ratings FROM khorma";
+$result_total_ratings_khorma = mysqli_query($db_connection, $query_total_ratings_khorma);
+$count_data_total_ratings_khorma = mysqli_fetch_assoc($result_total_ratings_khorma);
+$total_ratings_khorma = $count_data_total_ratings_khorma['total_ratings'];
+
+
 // Fetch all users from database
 $query_users = "SELECT * FROM `users`";
 $result_users = mysqli_query($db_connection, $query_users);
@@ -37,6 +44,16 @@ if(isset($_POST['delete_review_id'])) {
      $query_delete_colorsinpo = "DELETE FROM colorsinpo WHERE review_id = :review_id";
      $statement_colorsinpo = $connect->prepare($query_delete_colorsinpo);
      $statement_colorsinpo->execute(array(':review_id' => $delete_review_id));
+
+     // Delete from sip
+     $query_delete_sip = "DELETE FROM sip WHERE review_id = :review_id";
+     $statement_sip = $connect->prepare($query_delete_sip);
+     $statement_sip->execute(array(':review_id' => $delete_review_id));
+
+     //khorma
+     $query_delete_khorma = "DELETE FROM khorma WHERE review_id = :review_id";
+     $statement_khorma = $connect->prepare($query_delete_khorma);
+     $statement_khorma->execute(array(':review_id' => $delete_review_id));
 }
 
 $query_reviews = "SELECT * FROM review_tables ORDER BY review_id DESC";
@@ -48,15 +65,12 @@ $result_reviews_dou = $connect->query($query_reviews_dou, PDO::FETCH_ASSOC);
 $query_reviews_colorsinpo = "SELECT * FROM colorsinpo ORDER BY review_id DESC";
 $result_reviews_colorsinpo = $connect->query($query_reviews_colorsinpo, PDO::FETCH_ASSOC);
 
+$query_reviews_sip = "SELECT * FROM sip ORDER BY review_id DESC";
+$result_reviews_sip = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
 
-
-///color sinpo rating count
-//rating
-$query_total_ratings_colorsinpo = "SELECT COUNT(*) as total_ratings FROM colorsinpo";
-$result_total_ratings_colorsinpo = mysqli_query($db_connection, $query_total_ratings_colorsinpo);
-$count_data_total_ratings_colorsinpo= mysqli_fetch_assoc($result_total_ratings_colorsinpo);
-$total_ratings_colorsinpo= $count_data_total_ratings_colorsinpo['total_ratings'];
-
+///KHORMA
+$query_reviews_khorma= "SELECT * FROM khorma ORDER BY review_id DESC";
+$result_reviews_khorma = $connect->query($query_reviews_khorma, PDO::FETCH_ASSOC);
 ?>
 
 <!DOCTYPE html>
@@ -201,7 +215,7 @@ $total_ratings_colorsinpo= $count_data_total_ratings_colorsinpo['total_ratings']
     <div class="rating-header">
         <div class="rating-content">
         <div class="relative overflow-x-auto">
-        <h1>Total Ratings in Colorsinpo: <?php echo $total_ratings_colorsinpo; ?></h1>
+        <div>Total Ratings in Khorma: <?php echo $total_ratings_khorma; ?></div>
     <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
         <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
             <tr>
@@ -226,7 +240,7 @@ $total_ratings_colorsinpo= $count_data_total_ratings_colorsinpo['total_ratings']
             </tr>
         </thead>
         <tbody>
-        <?php while ($row = $result_reviews_colorsinpo->fetch()): ?>
+        <?php while ($row = $result_reviews_khorma->fetch()): ?>
             <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                 <th scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
                 <?php echo $row['review_id']; ?>

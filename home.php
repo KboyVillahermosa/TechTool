@@ -9,7 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="style/indexz.css">
+  <link rel="stylesheet" href="style/indexs.css">
   <title>Techtool</title>
 </head>
 <body class="bg-white dark:bg-gray-800">
@@ -216,17 +216,16 @@
     </div>
   </section>
 
-  <!----------------------------------------------- web resources --------------------------------------------->
-  <section>
+   <!----------------------------------------------- web resources --------------------------------------------->
+   <section id="web-resources">
     <div class="webresources-title">
       <h1 class="text-gray-900 dark:text-white text-3xl md:text-5xl font-extrabold mb-2">Web Resources</h1>
     </div>
     <div class="web-resources-header">
       <div class="web-resources-content">
-        <a href="#"
+        <a href="./dashboard-pages/color/adobecolor.php"
           class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-          <img class="object-cover w-full   md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="images/adobe.png" alt="">
+          <img class="object-cover  md:h-auto md:w-48 md:rounded-none md:rounded-s-lg" src="images/adobe.png" alt="">
           <div class="flex flex-col justify-between p-2 leading-normal">
             <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Adobe Color</h5>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
@@ -234,8 +233,10 @@
           </div>
         </a>
       </div>
+
+        <!------------------------------------ COLOR HUNTS  ------------------------------------------------->
       <div class="web-resources-content">
-        <a href="#"
+        <a href="./dashboard-pages/color/colorhunt.php"
           class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
           <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
             src="images/hunt.png" alt="">
@@ -246,61 +247,273 @@
           </div>
         </a>
       </div>
+
+        <!------------------------------------ COLORSINPO  ------------------------------------------------->
+      <div class="web-resources-content">
+        <a href="./dashboard-pages/color/colorsinpo.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/colorsinpo.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Colorsinpo</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">With the Colorsinspo plugin, you can
+              supercharge your design workflow and accelerate the process of choosing colors for your projects.</p>
+          </div>
+        </a>
+      </div>
+
+        <!------------------------------------ COOLORS ------------------------------------------------->
       <div class="web-resources-content">
         <a href="#"
           class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
           <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="images/adobe.png" alt="">
+            src="images/coolor.png" alt="">
           <div class="flex flex-col justify-between p-2 leading-normal">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-              acquisitions 2021</h5>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Coolors</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Coolors is your ultimate destination for effortless color exploration and palette generation.</p>
+          </div>
+        </a>
+      </div>
+     <!------------------------------------ DOU  ------------------------------------------------->
+      <div class="web-resources-content">
+        <a href="./dashboard-pages/color/dou.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/dou.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Dou</h5>
             <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
               acquisitions of 2021 so far, in reverse chronological order.</p>
           </div>
         </a>
       </div>
 
+      <!-------------------------- HAPPY HUES ---------------------------------------------------->
       <div class="web-resources-content">
-        <a href="#"
+        <a href="./dashboard-pages/color/happyhues.php"
           class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
           <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="images/adobe.png" alt="">
+            src="images/happy-hues.jpeg" alt="">
           <div class="flex flex-col justify-between p-2 leading-normal">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-              acquisitions 2021</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-              acquisitions of 2021 so far, in reverse chronological order.</p>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Happy Hues</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Finding the perfect colors for your design projects
+                        just got easier with Happy Hues.</p>
           </div>
         </a>
       </div>
 
+
+      <!------------------------------ KHORMA --------------------------------------------->
+    
       <div class="web-resources-content">
-        <a href="#"
+        <a href="./dashboard-pages/color/khroma.php"
           class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
           <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="images/adobe.png" alt="">
+            src="images/khormas.jpg" alt="">
           <div class="flex flex-col justify-between p-2 leading-normal">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-              acquisitions 2021</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-              acquisitions of 2021 so far, in reverse chronological order.</p>
-          </div>
-        </a>
-      </div>
-      <div class="web-resources-content">
-        <a href="#"
-          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
-          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
-            src="images/adobe.png" alt="">
-          <div class="flex flex-col justify-between p-2 leading-normal">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology
-              acquisitions 2021</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-              acquisitions of 2021 so far, in reverse chronological order.</p>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Khorma</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Finding the perfect colors for your design projects
+                        just got easier with Happy Hues.</p>
           </div>
         </a>
       </div>
 
+      <!----------------------------- LOLCOLORS ----------------------------------------------------->
+      <div class="web-resources-content">
+        <a href="./dashboard-pages/color/lolcolors.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/lolcolors.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Lolcolors</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Unleash your creativity with LOL Colors.</p>
+          </div>
+        </a>
+      </div>
+
+      <!----------------------------- SIP ------------------------------------------------------------------->
+      <div class="web-resources-content">
+        <a href="./dashboard-pages/color/sip.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/sip.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">SIP</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Sip revolutionizes the way designers work with colors</p>
+          </div>
+        </a>
+      </div>
+      </div>
+
+       <!---------------------- TAILWINDCHEAT ---------------------------------------------->
+       <div id="hide-projects" class="web-resources-hidden hide">
+       <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/css-framework/tailwindcheat.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/tailwindcss.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tailwindcheat</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> your ultimate companion for mastering Tailwind CSS and accelerating your web development workflow</p>
+          </div>
+        </a>
+      </div>
+      <!---------------------------------- TAILWIND COMPONENTS ------------------------------------------->
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/css-framework/tailwindcomponents.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/tailwindcss.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Tailwind Componentst</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> enhance your projects with Tailwind CSS</p>
+          </div>
+        </a>
+      </div>
+
+      <!------------------------------------ DATACAMP --------------------------------------------------------------->
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/database/datacamp.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/datacamp.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Data Camp</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Data Camp is your gateway to unlocking the immense potential of data and artificial intelligence </p>
+          </div>
+        </a>
+      </div>
+
+      <!------------------------------- DB DIAGRAM  ------------------------------------------------------------------------>
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/database/dbdiagram.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/db-dia.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">DB Diagram</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> free online database diagramming tool that simplifies the process of designing your database schema</p>
+          </div>
+        </a>
+      </div>
+
+      <!--------------------------------- GEEKSFORGEEKS -------------------------------------------------------------->
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/database/geeksforgeeks.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/geeksforgeeks.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">GeeksforGeeks</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> free online database diagramming tool that simplifies the process of designing your database schema</p>
+          </div>
+        </a>
+      </div>
+
+      <!------------------------------------ MODE -------------------------------------------------------------------------->
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/database/mode.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/mode.jpg" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mode</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">  offering comprehensive solutions across the entire spectrum of data analysis</p>
+          </div>
+        </a>
+      </div>
+
+     <!----------------------------------------- MONGO DB -------------------------------------------------------------------------> 
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/database/mongodb.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/mongodv.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Mongo DB</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Start your MongoDB journey today and unlock the full potential of your data.</p>
+          </div>
+        </a>
+      </div>
+   
+      <!---------------------------------------- MYSQL DOCUMENTATION ----------------------------------------------------------->
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/database/mysqldocument.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/mysql.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">MYSQL Documentation</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> Explore the wealth of knowledge offered by the official MySQL Documentation</p>
+          </div>
+        </a>
+      </div>
+
+      <!------------------------------------- RED DASH ----------------------------------------------------------------------------->
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/database/redash.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/redash.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">RedDash</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> a powerful data visualization and dashboarding tool that empowers you to connect, query, and visualize your data with ease.</p>
+          </div>
+        </a>
+      </div>
+
+      <!---------------------------------- SQL PAD --------------------------------------------------------------------------->
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/database/sqlpad.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/sql-pad.jpg" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">SQL PAD</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> a powerful data visualization and dashboarding tool that empowers you to connect, query, and visualize your data with ease.</p>
+          </div>
+        </a>
+      </div>
+
+      <!------------------------------------- SQL ZOO ------------------------------------------------------>
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/database/sqlzoo.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/sqlzoo.jpg" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">SQL Zoo</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> a powerful data visualization and dashboarding tool that empowers you to connect, query, and visualize your data with ease.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-------------------------------------- ADELE DESIGN SYSTEM ------------------------------------------------>
+      <div class="web-resources-hidden-content">
+        <a href="./dashboard-pages/designsystem/adele.php"
+          class="flex flex-col items-center bg-white border border-gray-200 rounded-lg shadow md:flex-row md:max-w-xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+          <img class="object-cover w-full rounded-t-lg h-96 md:h-auto md:w-48 md:rounded-none md:rounded-s-lg"
+            src="images/adobe.png" alt="">
+          <div class="flex flex-col justify-between p-2 leading-normal">
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Adele</h5>
+            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400"> it's a comprehensive collection of publicly available design systems and pattern libraries from around the world.</p>
+          </div>
+        </a>
+      </div>
+
+
+
+
+      </div>
+
+
+
+    <div class="see-more-header">
+    <div class="text-center mt-4">
+    <button id="toggle-projects" class="bg-blue-500 text-white px-4 py-2 rounded-md shadow-md hover:bg-blue-600">
+        See More
+    </button>
+</div>
     </div>
   </section>
 <!----------------------------------------- alert -------------------------------------------------->
@@ -357,6 +570,22 @@
 
       // Add event listeners to other elements as needed
     });
+
+    ///show more 
+    document.addEventListener("DOMContentLoaded", function () {
+    const toggleButton = document.getElementById("toggle-projects");
+    const hideProjects = document.getElementById("hide-projects"); // Updated variable name
+
+    toggleButton.addEventListener("click", function () {
+        if (hideProjects.classList.contains("hide")) {
+            hideProjects.classList.remove("hide");
+            toggleButton.textContent = "Show Less";
+        } else {
+            hideProjects.classList.add("hide");
+            toggleButton.textContent = "See More";
+        }
+    });
+});
   </script>
 </body>
 

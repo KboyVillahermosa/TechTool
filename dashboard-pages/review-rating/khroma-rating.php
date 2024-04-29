@@ -8,7 +8,7 @@ if(isset($_POST["rating_data"], $_POST["user_name"], $_POST["user_review"])) {
     $user_review = $_POST["user_review"];
 
     // Perform database insert operation
-    $query = "INSERT INTO khroma(user_name, user_review, user_rating, datetime) VALUES (:user_name, :user_review, :user_rating, NOW())";
+    $query = "INSERT INTO khorma (user_name, user_review, user_rating, datetime) VALUES (:user_name, :user_review, :user_rating, NOW())";
     $statement = $connect->prepare($query);
     $statement->execute(array(
         ':user_name' => $user_name,
@@ -33,7 +33,7 @@ if(isset($_POST["action"]))
     $review_content = array();
 
     $query = "
-    SELECT * FROM khroma
+    SELECT * FROM khorma
     ORDER BY review_id DESC
     ";
 

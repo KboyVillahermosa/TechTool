@@ -1,11 +1,12 @@
 <?php
-require 'config.php';
+require '../config.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['login_id'])) {
    header('Location: login.php');
    exit;
 }
+
 // Fetch all users from database
 $query_users = "SELECT * FROM `users`";
 $result_users = mysqli_query($db_connection, $query_users);
@@ -36,39 +37,49 @@ if (isset($_POST['delete_review_id'])) {
    $query_delete_colorsinpo = "DELETE FROM colorsinpo WHERE review_id = :review_id";
    $statement_colorsinpo = $connect->prepare($query_delete_colorsinpo);
    $statement_colorsinpo->execute(array(':review_id' => $delete_review_id));
+
+   // Delete from sip
+   $query_delete_sip = "DELETE FROM sip WHERE review_id = :review_id";
+   $statement_sip = $connect->prepare($query_delete_sip);
+   $statement_sip->execute(array(':review_id' => $delete_review_id));
+
+    // Delete from lol colors
+    $query_delete_lolcolors = "DELETE FROM lolcolors WHERE review_id = :review_id";
+    $statement_lolcolors = $connect->prepare($query_delete_lolcolors);
+    $statement_lolcolors->execute(array(':review_id' => $delete_review_id));
+
+    /// Delete from happy hues
+    $query_delete_happy_hues = "DELETE FROM happy-hues WHERE review_id = :review_id";
+    $statement_happy_hues = $connect->prepare($query_delete_happy_hues);
+    $statement_happy_hues->execute(array(':review_id' => $delete_review_id));
 }
 
+///adobe colors
 $query_reviews = "SELECT * FROM review_tables ORDER BY review_id DESC";
 $result_reviews = $connect->query($query_reviews, PDO::FETCH_ASSOC);
 
+////dou
 $query_reviews_dou = "SELECT * FROM dou ORDER BY review_id DESC";
 $result_reviews_dou = $connect->query($query_reviews_dou, PDO::FETCH_ASSOC);
 
+///colorsinpo
 $query_reviews_colorsinpo = "SELECT * FROM colorsinpo ORDER BY review_id DESC";
 $result_reviews_colorsinpo = $connect->query($query_reviews_colorsinpo, PDO::FETCH_ASSOC);
 
+///sip
+$query_reviews_sip = "SELECT * FROM sip ORDER BY review_id DESC";
+$result_reviews_sip = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
+
+///lol colors
+$query_reviews_lolcolors = "SELECT * FROM lolcolors ORDER BY review_id DESC";
+$result_reviews_lolcolors = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
 
 
-///ratingss counts 
+///lol colors
+$query_reviews_happy_hues = "SELECT * FROM happy-hues ORDER BY review_id DESC";
+$result_reviews_happy_hues = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
 
-///adobee rating count
-$query_total_ratings_review_tables = "SELECT COUNT(*) as total_ratings FROM review_tables";
-$result_total_ratings_review_tables = mysqli_query($db_connection, $query_total_ratings_review_tables);
-$count_data_total_ratings_review_tables = mysqli_fetch_assoc($result_total_ratings_review_tables);
-$total_ratings_review_tables = $count_data_total_ratings_review_tables['total_ratings'];
-
-///color sinpo rating count
-$query_total_ratings_colorsinpo = "SELECT COUNT(*) as total_ratings FROM colorsinpo";
-$result_total_ratings_colorsinpo = mysqli_query($db_connection, $query_total_ratings_colorsinpo);
-$count_data_total_ratings_colorsinpo= mysqli_fetch_assoc($result_total_ratings_colorsinpo);
-$total_ratings_colorsinpo= $count_data_total_ratings_colorsinpo['total_ratings'];
-
-////colorhun total ratings
-$query_total_ratings_color_hunt = "SELECT COUNT(*) as total_ratings FROM color_hunt";
-$result_total_ratings_color_hunt = mysqli_query($db_connection, $query_total_ratings_color_hunt);
-$count_data_total_ratings_color_hunt = mysqli_fetch_assoc($result_total_ratings_color_hunt);
-$total_ratings_color_hunt = $count_data_total_ratings_color_hunt['total_ratings'];
-
+/////// total rating countsssssssssssssssssssssssss
 
 ///sip total count rating 
 $query_total_ratings_sip = "SELECT COUNT(*) as total_ratings FROM sip";
@@ -76,17 +87,12 @@ $result_total_ratings_sip = mysqli_query($db_connection, $query_total_ratings_si
 $count_data_total_ratings_sip = mysqli_fetch_assoc($result_total_ratings_sip);
 $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
 
-/// khorma rating count
-$query_total_ratings_khorma = "SELECT COUNT(*) as total_ratings FROM khorma";
-$result_total_ratings_khorma = mysqli_query($db_connection, $query_total_ratings_khorma);
-$count_data_total_ratings_khorma = mysqli_fetch_assoc($result_total_ratings_khorma);
-$total_ratings_khorma = $count_data_total_ratings_khorma['total_ratings'];
+/// happy hues total count rating
+$query_total_ratings_happy_hues = "SELECT COUNT(*) as total_ratings FROM happy-hues";
+$result_total_ratings_happy_hues = mysqli_query($db_connection, $query_total_ratings_happy_hues);
+$count_data_total_ratings_happy_hues = mysqli_fetch_assoc($result_total_ratings_happy_hues);
+$total_ratings_happy_hues = $count_data_total_ratings_happy_hues['total_ratings'];
 
-///lolcolors rating count
-$query_total_ratings_lolcolors = "SELECT COUNT(*) as total_ratings FROM lolcolors";
-$result_total_ratings_lolcolors = mysqli_query($db_connection, $query_total_ratings_lolcolors);
-$count_data_total_ratings_lolcolors = mysqli_fetch_assoc($result_total_ratings_lolcolors);
-$total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
 ?>
 
 <!DOCTYPE html>
@@ -96,53 +102,11 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-   <link rel="stylesheet" href="style/admin.css">
-   <title>Document</title>
+   <link rel="stylesheet" href="./admin-css/admin.css">
+   <title>Lol Colors Admin</title>
 </head>
 
 <body class="bg-white dark:bg-gray-800">
-   <style>
-      .dashboard-header {
-         display: flex;
-         justify-content: center;
-         flex-direction: row;
-         flex-wrap: wrap;
-         margin-top: 50px;
-         gap: 30px;
-      }
-
-      .dashboard-content {
-         width: 100%;
-         max-width: 300px;
-      }
-
-      #adobe-content {
-         background: #31C48D;
-         padding: 10px;
-      }
-
-      #khorma-content{
-         background: #1C64F2;
-         padding: 10px;
-      }
-      #colorsinpo{
-         background: #8DA2FB;
-         padding: 10px;
-
-      }
-      #color_hunt{
-         background: #FACA15;
-         padding: 10px;
-      }
-      #sip{
-         background: #E74694;
-         padding: 10px;
-      }
-      #lolcolors{
-         background: #BF125D;
-         padding: 10px;
-      }
-   </style>
    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-gray-800 dark:border-gray-700">
       <div class="px-3 py-3 lg:px-5 lg:pl-3">
          <div class="flex items-center justify-between">
@@ -160,13 +124,13 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                </button>
                <a href="https://flowbite.com" class="flex ms-2 md:me-24">
                   <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
-                  <span
-                     class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">Flowbite</span>
+                  <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">TechTool
+                     Admin</span>
                </a>
             </div>
             <div class="flex items-center">
                <div class="flex items-center ms-3">
-                  <div class="dark-mode mr-3">
+               <div class="dark-mode mr-3">
                      <button id="theme-toggle" type="button"
                         class="text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5">
                         <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20"
@@ -218,7 +182,7 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                               role="menuitem">Earnings</a>
                         </li>
                         <li>
-                           <a href="index.php"
+                           <a href="#"
                               class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white"
                               role="menuitem">Sign out</a>
                         </li>
@@ -230,13 +194,14 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
       </div>
    </nav>
 
+
    <aside id="logo-sidebar"
       class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
       aria-label="Sidebar">
       <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
          <ul class="space-y-2 font-medium">
             <li>
-               <a href="#"
+               <a href="../admin-page.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -250,7 +215,7 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                </a>
             </li>
             <li>
-               <a href="./admin-rating/adobe-admin.php"
+               <a href="../admin-rating/adobe-admin.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -262,7 +227,7 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                </a>
             </li>
             <li>
-               <a href="./admin-rating/colorsinpo-admin.php "
+               <a href="../admin-rating/colorsinpo-admin.php "
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -274,7 +239,7 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                </a>
             </li>
             <li>
-               <a href="./admin-rating/colorhunt-admin.php"
+               <a href="../admin-rating/colorhunt-admin.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -286,7 +251,7 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                </a>
             </li>
             <li>
-               <a href="./admin-rating/sip-admin.php"
+               <a href="../admin-rating/sip-admin.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -298,7 +263,7 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                </a>
             </li>
             <li>
-               <a href="./admin-rating/khorma-admin.php"
+               <a href="../admin-rating/khorma-admin.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -309,18 +274,6 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                   <span class="flex-1 ms-3 whitespace-nowrap">Khorma Rating</span>
                </a>
             </li>
-            <li>
-               <a href="./admin-rating/lolcolors-admin.php"
-                  class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                  <svg
-                     class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
-                     aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 20 18">
-                     <path
-                        d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
-                  </svg>
-                  <span class="flex-1 ms-3 whitespace-nowrap">Lolcolors Rating</span>
-               </a>
-            </li> 
          </ul>
       </div>
    </aside>
@@ -329,10 +282,10 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
 
 
       <section>
-         <div class="user-header">
-            <div class="user-content">
+         <div class="rating-header">
+            <div class="rating-content">
                <div class="relative overflow-x-auto">
-                  <p>Total Users: <?php echo $total_users; ?></p>
+                  <H1>Total Ratings in Khorma: <?php echo $total_ratings_happy_hues; ?></H1>
                   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
@@ -340,32 +293,47 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                               ID
                            </th>
                            <th scope="col" class="px-6 py-3">
-                              Name
+                              User Name
                            </th>
                            <th scope="col" class="px-6 py-3">
-                              Email
+                              User Review
                            </th>
                            <th scope="col" class="px-6 py-3">
-                              Profile Picture
+                              User Rating
+                           </th>
+                           <th scope="col" class="px-6 py-3">
+                              Date Rate
+                           </th>
+                           <th scope="col" class="px-6 py-3">
+                              Action
                            </th>
                         </tr>
                      </thead>
                      <tbody>
-                        <?php while ($row = mysqli_fetch_assoc($result_users)): ?>
+                        <?php while ($row = $result_reviews_sip->fetch()): ?>
                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                               <th scope="row"
                                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                                 <?php echo $row['google_id']; ?>
+                                 <?php echo $row['review_id']; ?>
                               </th>
                               <td class="px-6 py-4">
-                                 <?php echo $row['name']; ?>
+                                 <?php echo $row['user_name']; ?>
                               </td>
                               <td class="px-6 py-4">
-                                 <?php echo $row['email']; ?>
+                                 <?php echo $row['user_review']; ?>
                               </td>
                               <td class="px-6 py-4">
-                                 <img src="<?php echo $row['profile_image']; ?>" alt="<?php echo $row['name']; ?>"
-                                    width="50">
+                                 <?php echo $row['user_rating']; ?>
+                              </td>
+                              <td class="px-6 py-4">
+                                 <?php echo $row['datetime']; ?>
+                              </td>
+                              <td class="px-6 py-4">
+                                 <form method="post"
+                                    onsubmit="return confirm('Are you sure you want to delete this review?');">
+                                    <input type="hidden" name="delete_review_id" value="<?php echo $row['review_id']; ?>">
+                                    <button type="submit" class="delete">Delete</button>
+                                 </form>
                               </td>
                            </tr>
                         <?php endwhile; ?>
@@ -373,52 +341,10 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
                   </table>
                </div>
 
+
             </div>
          </div>
       </section>
-      <!------------------- dash board----------------------------------------------->
-      <section>
-         <div class="dashboard-header">
-            <div class="dashboard-content" id="adobe-content">
-               <h1 class="text-white">Abode Color</h1>
-               <h1 class="text-white">Total User Rating:
-                  <?php echo $total_ratings_review_tables; ?>
-               </h1>
-            </div>
-            <div class="dashboard-content" id="khorma-content">
-               <h1 class="text-white">Khorma</h1>
-               <h1 class="text-white">Total User Rating:
-                  <?php echo $total_ratings_khorma; ?>
-               </h1>
-            </div>
-            <div class="dashboard-content" id="colorsinpo">
-               <h1 class="text-white">Colorsinpo</h1>
-               <h1 class="text-white">Total User Rating:
-                  <?php echo $total_ratings_colorsinpo; ?>
-               </h1>
-            </div>
-            <div class="dashboard-content" id="color_hunt">
-               <h1 class="text-white">Colorhunt</h1>
-               <h1 class="text-white">Total User Rating:
-                  <?php echo $total_ratings_color_hunt; ?>
-               </h1>
-            </div>
-            <div class="dashboard-content" id="sip">
-               <h1 class="text-white">Sip</h1>
-               <h1 class="text-white">Total User Rating:
-                  <?php echo $total_ratings_sip; ?>
-               </h1>
-            </div>
-            <div class="dashboard-content" id="lolcolors">
-               <h1 class="text-white">Sip</h1>
-               <h1 class="text-white">Total User Rating:
-                  <?php echo $total_ratings_lolcolors; ?>
-               </h1>
-            </div>
-         </div>
-      </section>
-
-
 
 
 
@@ -426,7 +352,7 @@ $total_ratings_lolcolors = $count_data_total_ratings_lolcolors['total_ratings'];
    </section>
 
    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-   <script src="./admin-rating/admin-js/admin.js"></script>
+   <script src="./admin-js/admin.js"></script>
 </body>
 
 </html>

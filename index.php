@@ -99,7 +99,7 @@ if (mysqli_num_rows($get_user) > 0) {
               Recommendation</a>
           </li>
           <li>
-            <a href="#"
+            <a href="contact.php"
               class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
           </li>
           <li>
@@ -199,8 +199,6 @@ if (mysqli_num_rows($get_user) > 0) {
   </section>
 
   <!--------------------------------------------------- resources content ----------------------------------------------------->
-
-
   <section class="bg-white dark:bg-gray-900">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16">
       <div class="bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-8 md:p-12 mb-8">
@@ -590,7 +588,7 @@ if (mysqli_num_rows($get_user) > 0) {
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
               <a href="https://flowbite.com/" class="flex items-center">
-                  <img src="../images/logow.png" class="h-8 me-3" alt="FlowBite Logo" />
+                  <img src="./images/logow.png" class="h-8 me-3" alt="FlowBite Logo" />
                   <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">TechTool</span>
               </a>
           </div>
