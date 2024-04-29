@@ -338,7 +338,7 @@ if (mysqli_num_rows($get_user) > 0) {
                 <p class="text-gray-600 dark:text-gray-300"> Mode serves as a pivotal platform, offering comprehensive solutions across the entire spectrum of data analysis. From the intricate needs of data analysts to providing accessible insights for end-users, Mode caters to the diverse requirements of every stakeholder in the data ecosystem.</p>
             </div>
             <div class="tools-image">
-                <img src="../dash-images/mogodb.png" alt="">
+                <img src="../dash-images/mode-com.png" alt="">
                 <a href="https://mode.com" target="_blank">
                     <button type="button" class="text-white bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2"> Visit Website</button>
                 </a>

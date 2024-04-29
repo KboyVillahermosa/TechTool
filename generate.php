@@ -62,21 +62,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
     if ($interests == 'Frontend') {
         $recommendations[] = '
                               <div class="web-design">
-                              <div class="web-design-content">
+                              <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">Code Academy</h1>
-                              <a href="./dashboard-pages/database/datacamp.php">
+                              <a href="">
                               <img src="./dashboard-pages/dash-images/codeacademy.png" class="">
                               <p class="text-gray-900 dark:text-white"> Codecademy is an online interactive platform that offers free and paid coding classes in various programming languages and web development technologies. </p>
                               </a>
                              </div>
-                             <div class="web-design-content">
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">Abstract</h1>
                               <a class="/dashboard-pages/designtools/abstract.php">
                               <img src="./dashboard-pages/dash-images/abstract.png">
                               </a>
                               <p class="text-gray-900 dark:text-white">its a platform that empowers designers to create interactive user flows</p>
                              </div>
-                             <div class="web-design-content">
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">Lottie</h1>
                               <a href="./dashboard-pages/designtools/lottie.php">
                               <img src="./dashboard-pages/dash-images/lottie.png">
@@ -85,32 +85,30 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
                              </div>
                              </div>
                              ';
-        $recommendations[] = "Explore freeCodeCamp for a wide range of frontend projects and challenges.";
     } elseif ($interests == 'Backend') {
         $recommendations[] = '<div class="web-design">
-                              <div class="web-design-content">
-                              <h1 class="text-gray-900 dark:text-white">Figma</h1>
+                              <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                              <h1 class="text-gray-900 dark:text-white">Data Camp</h1>
                               <a href="./dashboard-pages/database/datacamp.php">
                               <img src="./dashboard-pages/dash-images/datacamp.png" class="">
                               <p class="text-gray-900 dark:text-white"> Data Camp is your gateway to unlocking the immense potential of data and artificial intelligence through comprehensive learning resources.</p>
                               </a>
                              </div>
-                             <div class="web-design-content">
-                              <h1 class="text-gray-900 dark:text-white">Abstract</h1>
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                              <h1 class="text-gray-900 dark:text-white">Mode.com</h1>
                               <a class="/dashboard-pages/designtools/abstract.php">
-                              <img src="./dashboard-pages/dash-images/abstract.png">
+                              <img src="./dashboard-pages/dash-images/mode-com.png">
                               </a>
                               <p class="text-gray-900 dark:text-white">its a platform that empowers designers to create interactive user flows</p>
                              </div>
-                             <div class="web-design-content">
-                              <h1 class="text-gray-900 dark:text-white">Lottie</h1>
-                              <a href="./dashboard-pages/designtools/lottie.php">
-                              <img src="./dashboard-pages/dash-images/lottie.png">
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                              <h1 class="text-gray-900 dark:text-white">Mongio DB</h1>
+                              <a href="./dashboard-pages/database/mode.php">
+                              <img src="./dashboard-pages/dash-images/mogodb.png">
                               </a>
                               <p class="text-gray-900 dark:text-white">revolutionizing how apps engage users with dynamic and captivating visual experiences.</p>
                              </div>
                              </div>';
-        $recommendations[] = "Check out Node.js official documentation for learning backend JavaScript.";
     } elseif ($interests == 'Full Stack') {
         $recommendations[] = '<div class="recomend-header">
                               <div class="recomend-content">
@@ -123,21 +121,21 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
                               </div>
                               </div>
                               <div class="web-design">
-                              <div class="web-design-content">
+                              <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">Spark</h1>
-                              <a href=">
-                              <img src="./dashboard-pages/dash-images/sparks.png" class="">
+                              <a href="">
+                              <img src="./dashboard-pages/dash-images/sparkz.png" class="">
                               <p class="text-gray-900 dark:text-white">Apache Spark is an open source data processing and analytics engine that can handle large amounts of data</p>
                               </a>
                              </div>
-                             <div class="web-design-content">
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">Abstract</h1>
                               <a class="">
                               <img src="./dashboard-pages/dash-images/d3-js.png">
                               </a>
                               <p class="text-gray-900 dark:text-white">D3.js is a JavaScript library for creating custom data visualizations in a web browser. </p>
                              </div>
-                             <div class="web-design-content">
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">IBM SPSS</h1>
                               <a href="">
                               <img src="./dashboard-pages/dash-images/ibm.png">
@@ -145,49 +143,47 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
                               <p class="text-gray-900 dark:text-white">IBM SPSS is a family of software for managing and analyzing complex statistical data.</p>
                              </div>
                              </div>';
-        $recommendations[] = 'You can check this <a href="dashboard-pages/database/mongodb.php">MongoDB</a>';
     } elseif ($interests == 'Data Science') {
         $recommendations[] = '<div class="web-design">
-                              <div class="web-design-content">
-                              <h1 class="text-gray-900 dark:text-white">Spark</h1>
-                              <a href=">
-                              <img src="./dashboard-pages/dash-images/spark.png" class="">
-                              <p class="text-gray-900 dark:text-white">Apache Spark is an open source data processing and analytics engine that can handle large amounts of data</p>
+                              <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                              <h1 class="text-gray-900 dark:text-white">Data Science Central</h1>
+                              <a href="https://www.datasciencecentral.com" target="_blank">
+                              <img src="./dashboard-pages/dash-images/datascience.png" class="">
+                              <p class="text-gray-900 dark:text-white"> Data Science Central is a community-based website that provides articles, tutorials, webinars, and resources on various topics related to data science, big data, and AI.</p>
                               </a>
                              </div>
-                             <div class="web-design-content">
-                              <h1 class="text-gray-900 dark:text-white">Abstract</h1>
-                              <a class="">
-                              <img src="./dashboard-pages/dash-images/d3-js.png">
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
+                              <h1 class="text-gray-900 dark:text-white">KD nuggets</h1>
+                              <a class="https://www.kdnuggets.com" target="_blank">
+                              <img src="./dashboard-pages/dash-images/kraggle.png">
                               </a>
                               <p class="text-gray-900 dark:text-white">D3.js is a JavaScript library for creating custom data visualizations in a web browser. </p>
                              </div>
-                             <div class="web-design-content">
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">IBM SPSS</h1>
                               <a href="">
                               <img src="./dashboard-pages/dash-images/ibm.png">
                               </a>
                               <p class="text-gray-900 dark:text-white">IBM SPSS is a family of software for managing and analyzing complex statistical data.</p>
                              </div>
-                             </div>';
-        $recommendations[] = "Check out DataCamp for interactive data science courses and projects.";
+                             </div>';     
     } elseif ($interests == 'Web Design') {
         $recommendations[] = '<div class="web-design">
-                              <div class="web-design-content">
+                              <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">Figma</h1>
                               <a href="./dashboard-pages/designtools/figma.php">
                               <img src="images/figma.png" class="">
                               <p class="text-gray-900 dark:text-white">Figma revolutionizes the design process by enabling teams to work together in real time</p>
                               </a>
                              </div>
-                             <div class="web-design-content">
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">Abstract</h1>
                               <a class="/dashboard-pages/designtools/abstract.php">
                               <img src="./dashboard-pages/dash-images/abstract.png">
                               </a>
                               <p class="text-gray-900 dark:text-white">its a platform that empowers designers to create interactive user flows</p>
                              </div>
-                             <div class="web-design-content">
+                             <div class="web-design-content bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">
                               <h1 class="text-gray-900 dark:text-white">Lottie</h1>
                               <a href="./dashboard-pages/designtools/lottie.php">
                               <img src="./dashboard-pages/dash-images/lottie.png">
@@ -195,13 +191,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
                               <p class="text-gray-900 dark:text-white">revolutionizing how apps engage users with dynamic and captivating visual experiences.</p>
                              </div>
                              </div>';
-        $recommendations[] = "hehe";
     }
 
-    // Store recommendations in session variable
     $_SESSION['recommendations'] = $recommendations;
-
-    // Redirect user to the page to display recommendations
     header('Location: show_recomend.php');
     exit;
 }
@@ -218,7 +210,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
         integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="style/indexss.css">
-    <link rel="stylesheet" href="style/generates.css">
+    <link rel="stylesheet" href="style/generatez.css">
     <title>Generate recommendation</title>
 </head>
 
@@ -293,11 +285,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
                     </li>
                     <li>
                         <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
                     </li>
                     <li>
-                        <a href="#"
-                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+                        <a href="fqa.php"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">FQA</a>
                     </li>
                     <li>
                         <button id="theme-toggle" type="button"

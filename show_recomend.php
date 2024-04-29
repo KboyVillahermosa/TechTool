@@ -22,7 +22,8 @@ $recommendations = isset($_SESSION['recommendations']) ? $_SESSION['recommendati
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-  <link rel="stylesheet" href="style/generates.css">
+  <link rel="shortcut icon" href="images/logow.png" type="image/x-icon">
+  <link rel="stylesheet" href="style/generatez.css">
   <title>Display Recommendations</title>
 </head>
 
@@ -91,17 +92,12 @@ $recommendations = isset($_SESSION['recommendations']) ? $_SESSION['recommendati
               aria-current="page">Home</a>
           </li>
           <li>
-            <a href="generate.php"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Generate
-              Rec</a>
+            <a href="#"
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
           </li>
           <li>
             <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
-          </li>
-          <li>
-            <a href="#"
-              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Pricing</a>
+              class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">FQA</a>
           </li>
           <li>
             <button id="theme-toggle" type="button"
@@ -122,8 +118,12 @@ $recommendations = isset($_SESSION['recommendations']) ? $_SESSION['recommendati
       </div>
     </div>
   </nav>
+  <section>
+    <div class="recommendation-header">
+    <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Recommendations</h1>
+    </div>
+  </section>
   <div>
-    <h2 class="text-lg font-normal text-gray-500 dark:text-gray-400 ">Recommendations</h2>
     <ul>
       <?php
       // Check if recommendations are set in the session

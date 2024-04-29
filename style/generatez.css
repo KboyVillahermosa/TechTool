@@ -47,6 +47,7 @@
 .web-design-content{
     width: 100%;
     max-width: 400px;
+    padding: 10px;
 }
 .web-design-content img{
     width: 100%;
@@ -151,7 +152,15 @@
       transform: rotateX(70deg) rotateZ(630deg);
     }
   }
-  /* Improving visualization in light mode */
+  
+
+/* recommendation header*/
+.recommendation-header{
+  justify-content: center;
+  display: flex;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
 
 
   
