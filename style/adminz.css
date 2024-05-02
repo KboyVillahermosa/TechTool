@@ -1,0 +1,78 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    gap: 30px;
+ }
+
+ .dashboard-content {
+    width: 100%;
+    max-width: 300px;
+ }
+
+ #adobe-content {
+    background: #31C48D;
+    padding: 10px;
+ }
+
+ #khorma-content{
+    background: #1C64F2;
+    padding: 10px;
+ }
+ #colorsinpo{
+    background: #8DA2FB;
+    padding: 10px;
+
+ }
+ #color_hunt{
+    background: #FACA15;
+    padding: 10px;
+ }
+ #sip{
+    background: #E74694;
+    padding: 10px;
+ }
+ #lolcolors{
+    background: #BF125D;
+    padding: 10px;
+ }
+
+
+.user-header{
+    margin-top: 80px;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.user-content{
+    width: 100%;
+    max-width: 1200px;
+}
+
+.color-title{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 80px;
+}
+.color-content{
+    width: 100%;
+    max-width: 500px;
+    margin-left: 120px;
+}
+@media screen and (max-width: 1000px){
+    .color-title{
+        text-align: center;
+    }
+    .color-content{
+        margin: auto;
+    }
+}

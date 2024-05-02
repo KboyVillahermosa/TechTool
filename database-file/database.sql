@@ -24,3 +24,25 @@ CREATE TABLE `users` (
  PRIMARY KEY (`id`),
  UNIQUE KEY `google_id` (`google_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+
+
+------------------------ admin table ---------------------
+DROP TABLE IF EXISTS `adminlogin`;
+CREATE TABLE IF NOT EXISTS `adminlogin` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+
+---------------------------- insert into ---------------
+INSERT INTO `adminlogin` (`id`, `username`, `password`) VALUES (NULL, 'admin', 'admin'), (NULL, 'admin2', 'admin2');
+
+
+------------------------ admin with image ----------------------
+INSERT INTO `adminlogin` (`id`, `username`, `password`, `image`, `email`)
+VALUES
+(NULL, 'admin', 'admin', 'admin_image.jpg', 'villahermosafrancisco6@gmail.com'),
+(NULL, 'admin2', 'admin2', 'admin2_image.jpg', 'jomaralberastine90@gmail.com');

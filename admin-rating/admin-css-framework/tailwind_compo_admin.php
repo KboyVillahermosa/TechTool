@@ -1,5 +1,5 @@
 <?php
-require '../config.php';
+require '../../config.php';
 
 // Check if user is logged in
 if (!isset($_SESSION['login_id'])) {
@@ -42,6 +42,16 @@ if (isset($_POST['delete_review_id'])) {
    $query_delete_sip = "DELETE FROM sip WHERE review_id = :review_id";
    $statement_sip = $connect->prepare($query_delete_sip);
    $statement_sip->execute(array(':review_id' => $delete_review_id));
+
+      // Delete from tailwind  cheat
+   $query_delete_tailwind_cheat = "DELETE FROM tailwind_cheat WHERE review_id = :review_id";
+   $statement_tailwind_cheat = $connect->prepare($query_delete_tailwind_cheat);
+   $statement_tailwind_cheat->execute(array(':review_id' => $delete_review_id));
+
+    // Delete from tailwind  components
+    $query_delete_tailwind_components = "DELETE FROM tailwind_components WHERE review_id = :review_id";
+    $statement_tailwind_components = $connect->prepare($query_delete_tailwind_components);
+    $statement_tailwind_components->execute(array(':review_id' => $delete_review_id));   
 }
 
 $query_reviews = "SELECT * FROM review_tables ORDER BY review_id DESC";
@@ -53,9 +63,17 @@ $result_reviews_dou = $connect->query($query_reviews_dou, PDO::FETCH_ASSOC);
 $query_reviews_colorsinpo = "SELECT * FROM colorsinpo ORDER BY review_id DESC";
 $result_reviews_colorsinpo = $connect->query($query_reviews_colorsinpo, PDO::FETCH_ASSOC);
 
+////sippp
 $query_reviews_sip = "SELECT * FROM sip ORDER BY review_id DESC";
 $result_reviews_sip = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
 
+///tailwind cheat
+$query_reviews_tailwind_cheat = "SELECT * FROM tailwind_cheat ORDER BY review_id DESC";
+$result_reviews_tailwind_cheat = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
+
+///tailwind cheat
+$query_reviews_tailwind_components = "SELECT * FROM tailwind_components ORDER BY review_id DESC";
+$result_reviews_tailwind_components = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
 
 ///sip total count rating 
 $query_total_ratings_sip = "SELECT COUNT(*) as total_ratings FROM sip";
@@ -63,6 +81,17 @@ $result_total_ratings_sip = mysqli_query($db_connection, $query_total_ratings_si
 $count_data_total_ratings_sip = mysqli_fetch_assoc($result_total_ratings_sip);
 $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
 
+//tailwind cheat
+$query_total_ratings_tailwind_cheat = "SELECT COUNT(*) as total_ratings FROM sip";
+$result_total_ratings_tailwind_cheat = mysqli_query($db_connection, $query_total_ratings_tailwind_cheat);
+$count_data_total_ratings_tailwind_cheat = mysqli_fetch_assoc($result_total_ratings_tailwind_cheat);
+$total_ratings_tailwind_cheat = $count_data_total_ratings_tailwind_cheat['total_ratings'];
+
+//tailwind components
+$query_total_ratings_tailwind_components = "SELECT COUNT(*) as total_ratings FROM sip";
+$result_total_ratings_tailwind_components = mysqli_query($db_connection, $query_total_ratings_tailwind_components);
+$count_data_total_ratings_tailwind_components = mysqli_fetch_assoc($result_total_ratings_tailwind_components);
+$total_ratings_tailwind_components= $count_data_total_ratings_tailwind_components['total_ratings'];
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +101,7 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
-   <link rel="stylesheet" href="./admin-css/admin.css">
+   <link rel="stylesheet" href="../admin-css/admin.css">
    <title>Document</title>
 </head>
 
@@ -165,14 +194,13 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
    </nav>
 
 
-
    <aside id="logo-sidebar"
       class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
       aria-label="Sidebar">
       <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
          <ul class="space-y-2 font-medium">
             <li>
-               <a href="../admin-page.php"
+               <a href="../../admin-page.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -191,14 +219,14 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
                   <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 21">
                      <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"/>
                   </svg>
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Color Ratings</span>
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Color Rating</span>
                   <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                   </svg>
             </button>
             <ul id="dropdown-color" class="hidden py-2 space-y-2">
             <li>
-               <a href="../admin-rating/adobe-admin.php"
+               <a href="../../admin-rating/adobe-admin.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -210,7 +238,7 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
                </a>
             </li>
             <li>
-               <a href="../admin-rating/colorsinpo-admin.php "
+               <a href="../../admin-rating/colorsinpo-admin.php "
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -222,7 +250,7 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
                </a>
             </li>
             <li>
-               <a href="../admin-rating/colorhunt-admin.php"
+               <a href="../../admin-rating/colorhunt-admin.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -234,7 +262,7 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
                </a>
             </li>
             <li>
-               <a href="../admin-rating/sip-admin.php"
+               <a href="../../admin-rating/sip-admin.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -246,7 +274,7 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
                </a>
             </li>
             <li>
-               <a href="../admin-rating/khorma-admin.php"
+               <a href="../../admin-rating/khorma-admin.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -266,14 +294,14 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
                   <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 21">
                      <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"/>
                   </svg>
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Frameworks Ratings</span>
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Frameworks Rating</span>
                   <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                   </svg>
             </button>
             <ul id="dropdown-example" class="hidden py-2 space-y-2">
             <li>
-               <a href="../admin-rating/admin-css-framework/tailwind-cheat.php"
+               <a href="../../admin-rating/admin-css-framework/tailwind-cheat.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -285,7 +313,7 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
                </a>
             </li> 
             <li>
-               <a href="../admin-rating/admin-css-framework/tailwind_compo_admin.php"
+               <a href="../../admin-rating/admin-css-framework/tailwind_compo_admin.php"
                   class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                   <svg
                      class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 dark:text-gray-400 group-hover:text-gray-900 dark:group-hover:text-white"
@@ -309,7 +337,7 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
          <div class="rating-header">
             <div class="rating-content">
                <div class="relative overflow-x-auto">
-                  <H1>Total Ratings in Khorma: <?php echo $total_ratings_sip; ?></H1>
+                  <H1>Total Ratings in Tailwind Components <?php echo $total_ratings_tailwind_components; ?></H1>
                   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
@@ -334,7 +362,7 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
                         </tr>
                      </thead>
                      <tbody>
-                        <?php while ($row = $result_reviews_sip->fetch()): ?>
+                        <?php while ($row = $result_reviews_tailwind_components->fetch()): ?>
                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                               <th scope="row"
                                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -369,10 +397,6 @@ $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
             </div>
          </div>
       </section>
-
-
-
-
    </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
    <script src="./admin-js/admin.js"></script>
