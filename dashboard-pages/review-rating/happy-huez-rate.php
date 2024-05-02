@@ -8,7 +8,7 @@ if(isset($_POST["rating_data"], $_POST["user_name"], $_POST["user_review"])) {
     $user_review = $_POST["user_review"];
 
     // Perform database insert operation
-    $query = "INSERT INTO happy-hues (user_name, user_review, user_rating, datetime) VALUES (:user_name, :user_review, :user_rating, NOW())";
+    $query = "INSERT INTO happy_hues (user_name, user_review, user_rating, datetime) VALUES (:user_name, :user_review, :user_rating, NOW())";
     $statement = $connect->prepare($query);
     $statement->execute(array(
         ':user_name' => $user_name,
@@ -33,7 +33,7 @@ if(isset($_POST["action"]))
     $review_content = array();
 
     $query = "
-    SELECT * FROM happy-hues
+    SELECT * FROM happy_hues
     ORDER BY review_id DESC
     ";
 

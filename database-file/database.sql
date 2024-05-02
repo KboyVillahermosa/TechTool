@@ -4,13 +4,91 @@
 
 -- REVIEW RATINGS --
 
-CREATE TABLE review_table (
+CREATE TABLE `review_table` (
   review_id int(11) NOT NULL,
   user_name varchar(200) NOT NULL,
   user_rating int(1) NOT NULL,
   user_review text NOT NULL,
   datetime int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+---- COLRO SINPO ------
+
+CREATE TABLE `colorsinpo` (
+  review_id int(11) NOT NULL,
+  user_name varchar(200) NOT NULL,
+  user_rating int(1) NOT NULL,
+  user_review text NOT NULL,
+  datetime int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+---- COLRO DOU ------
+
+CREATE TABLE `dou` (
+  review_id int(11) NOT NULL,
+  user_name varchar(200) NOT NULL,
+  user_rating int(1) NOT NULL,
+  user_review text NOT NULL,
+  datetime int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+------- h1ppy hues ------
+CREATE TABLE `happy_hues` (
+  review_id int(11) NOT NULL,
+  user_name varchar(200) NOT NULL,
+  user_rating int(1) NOT NULL,
+  user_review text NOT NULL,
+  datetime int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+---khorma----
+CREATE TABLE `happy_hues` (
+  review_id int(11) NOT NULL,
+  user_name varchar(200) NOT NULL,
+  user_rating int(1) NOT NULL,
+  user_review text NOT NULL,
+  datetime int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+---LOL COLORS----
+CREATE TABLE `lolcolors` (
+  review_id int(11) NOT NULL,
+  user_name varchar(200) NOT NULL,
+  user_rating int(1) NOT NULL,
+  user_review text NOT NULL,
+  datetime int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+---SIP----
+CREATE TABLE `sip` (
+  review_id int(11) NOT NULL,
+  user_name varchar(200) NOT NULL,
+  user_rating int(1) NOT NULL,
+  user_review text NOT NULL,
+  datetime int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+---- TAILWIND COMPONENTS ---
+CREATE TABLE `tailwind_components` (
+  review_id int(11) NOT NULL,
+  user_name varchar(200) NOT NULL,
+  user_rating int(1) NOT NULL,
+  user_review text NOT NULL,
+  datetime int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+---- TAILWIND CHEAT ---
+CREATE TABLE `tailwind_cheat` (
+  review_id int(11) NOT NULL,
+  user_name varchar(200) NOT NULL,
+  user_rating int(1) NOT NULL,
+  user_review text NOT NULL,
+  datetime int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 
 
 
@@ -46,3 +124,19 @@ INSERT INTO `adminlogin` (`id`, `username`, `password`, `image`, `email`)
 VALUES
 (NULL, 'admin', 'admin', 'admin_image.jpg', 'villahermosafrancisco6@gmail.com'),
 (NULL, 'admin2', 'admin2', 'admin2_image.jpg', 'jomaralberastine90@gmail.com');
+
+
+
+
+------ user prefs----
+CREATE TABLE `user_prefs` (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    user_id INT NOT NULL,
+    likes TEXT,
+    improvements TEXT,
+    tools_needed TEXT,
+    interests ENUM('Frontend', 'Backend', 'Full Stack', 'Data Science', 'Web Design'),
+    experience INT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (user_id) REFERENCES users(id)
+);
