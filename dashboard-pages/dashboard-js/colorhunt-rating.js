@@ -39,7 +39,7 @@ alert("Please Fill Both Fields");
 return false;
 } else {
 $.ajax({
-    url: "../colorhunt_rating.php",
+    url: "../colorhunt-rate.php",
     method: "POST",
     data: {
         rating_data: rating_data,
@@ -77,7 +77,7 @@ load_rating_data();
 
 function load_rating_data() {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "../colorhunt_rating.php", true);
+    xhr.open("POST", "../colorhunt-rate.php", true);
     xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4 && xhr.status === 200) {

@@ -367,7 +367,6 @@ if (mysqli_num_rows($get_user) > 0) {
     </section>
 
     <!----------------------------------- RATING STARS ------------------------------------------------->
-
     <section>
             <!-- drawer init and toggle -->
             <section>
