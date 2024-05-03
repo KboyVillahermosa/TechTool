@@ -116,10 +116,10 @@ function load_rating_data() {
             document.getElementById('one_star_progress').style.width = one_star_percentage + '%';
 
             document.getElementById('total_five_star_review').textContent = five_star_percentage.toFixed(2) + '%';
-    document.getElementById('total_four_star_review').textContent = four_star_percentage.toFixed(2) + '%';
-    document.getElementById('total_three_star_review').textContent = three_star_percentage.toFixed(2) + '%';
-    document.getElementById('total_two_star_review').textContent = two_star_percentage.toFixed(2) + '%';
-    document.getElementById('total_one_star_review').textContent = one_star_percentage.toFixed(2) + '%';
+            document.getElementById('total_four_star_review').textContent = four_star_percentage.toFixed(2) + '%';
+            document.getElementById('total_three_star_review').textContent = three_star_percentage.toFixed(2) + '%';
+            document.getElementById('total_two_star_review').textContent = two_star_percentage.toFixed(2) + '%';
+            document.getElementById('total_one_star_review').textContent = one_star_percentage.toFixed(2) + '%';
             
             if (data.review_data.length > 0) {
                 var html = '';
