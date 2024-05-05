@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -88,7 +87,7 @@
                 <h1 class="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">Admin Login</h1>
                 <div class="textbox ">
                     <label for="" class="mb-2 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-2xl dark:text-white"><i class="fa fa-user text-gray-900 dark:text-white" aria-hidden="true"></i> Username </label>
-                        <input type="text" placeholder="Username" class= name="username" value="" class="">
+                        <input type="text" placeholder="Username" class="" name="username" value="" class="">
             
 
                     <label for="" class="mb-2 text-2xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-2xl dark:text-white"><i class="fa fa-lock text-gray-900 dark:text-white" aria-hidden="true"></i> Password</label>

@@ -44,18 +44,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['likes']) && isset($_PO
     $formSubmitted = true;
 
     // Prepare and bind parameters for inserting user preferences
-    $stmt = $conn->prepare("INSERT INTO user_prefs (likes, improvements, tools_needed, interests, experience) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("ssssi", $likes, $improvements, $toolsNeeded, $interests, $experience);
+    $stmt = $conn->prepare("INSERT INTO user_prefs (user_id, likes, improvements, tools_needed, interests, experience) VALUES (?, ?, ?, ?, ?, ?)");
+    $stmt->bind_param("issssi", $user_id, $likes, $improvements, $toolsNeeded, $interests, $experience);
 
     // Set parameters and execute the statement
+    $user_id = $user['id']; // Assuming 'id' is the primary key of the 'users' table
     $likes = $_POST['likes'];
     $improvements = $_POST['improvements'];
     $toolsNeeded = $_POST['toolsNeeded'];
     $interests = $_POST['interests'];
     $experience = $_POST['experience'];
-
+    
     $stmt->execute();
-
+    
     $stmt->close();
 
     // Generate recommendations based on user inputs
