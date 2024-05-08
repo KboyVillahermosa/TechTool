@@ -1,6 +1,6 @@
 -- Review Tables --
 
-CREATE TABLE `review_table` (
+CREATE TABLE `review_tables` (
   `review_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(200) NOT NULL,
   `user_rating` int NOT NULL,
@@ -73,6 +73,85 @@ CREATE TABLE `tailwind_components` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 CREATE TABLE `tailwind_cheat` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(200) NOT NULL,
+  `user_rating` int NOT NULL,
+  `user_review` text NOT NULL,
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `datacamp` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(200) NOT NULL,
+  `user_rating` int NOT NULL,
+  `user_review` text NOT NULL,
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+
+
+CREATE TABLE `dbdiagram` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(200) NOT NULL,
+  `user_rating` int NOT NULL,
+  `user_review` text NOT NULL,
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `geeks` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(200) NOT NULL,
+  `user_rating` int NOT NULL,
+  `user_review` text NOT NULL,
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `mode` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(200) NOT NULL,
+  `user_rating` int NOT NULL,
+  `user_review` text NOT NULL,
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `mongo_db` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(200) NOT NULL,
+  `user_rating` int NOT NULL,
+  `user_review` text NOT NULL,
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+CREATE TABLE `mysql` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(200) NOT NULL,
+  `user_rating` int NOT NULL,
+  `user_review` text NOT NULL,
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `redash` (
+  `review_id` int(11) NOT NULL AUTO_INCREMENT,
+  `user_name` varchar(200) NOT NULL,
+  `user_rating` int NOT NULL,
+  `user_review` text NOT NULL,
+  `datetime` datetime NOT NULL,
+  PRIMARY KEY (`review_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+
+CREATE TABLE `sqlpad` (
   `review_id` int(11) NOT NULL AUTO_INCREMENT,
   `user_name` varchar(200) NOT NULL,
   `user_rating` int NOT NULL,

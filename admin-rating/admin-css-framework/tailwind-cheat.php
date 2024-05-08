@@ -388,7 +388,7 @@ $total_ratings_tailwind_cheat = $count_data_total_ratings_tailwind_cheat['total_
 
    </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-   <script src="./admin-js/admin.js"></script>
+   <script src="../admin-js/admin.js"></script>
 </body>
 
 </html>

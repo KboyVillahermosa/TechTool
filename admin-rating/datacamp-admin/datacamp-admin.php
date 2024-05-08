@@ -48,10 +48,12 @@ if (isset($_POST['delete_review_id'])) {
    $statement_tailwind_cheat = $connect->prepare($query_delete_tailwind_cheat);
    $statement_tailwind_cheat->execute(array(':review_id' => $delete_review_id));
 
-    // Delete from tailwind  components
-    $query_delete_tailwind_components = "DELETE FROM tailwind_components WHERE review_id = :review_id";
-    $statement_tailwind_components = $connect->prepare($query_delete_tailwind_components);
-    $statement_tailwind_components->execute(array(':review_id' => $delete_review_id));   
+    // Delete from datacamp
+    $query_delete_datacamp = "DELETE FROM datacamp WHERE review_id = :review_id";
+    $statement_datacamp = $connect->prepare($query_delete_datacamp);
+    $statement_datacamp->execute(array(':review_id' => $delete_review_id));
+
+   
 }
 
 $query_reviews = "SELECT * FROM review_tables ORDER BY review_id DESC";
@@ -71,9 +73,10 @@ $result_reviews_sip = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
 $query_reviews_tailwind_cheat = "SELECT * FROM tailwind_cheat ORDER BY review_id DESC";
 $result_reviews_tailwind_cheat = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
 
-///tailwind cheat
-$query_reviews_tailwind_components = "SELECT * FROM tailwind_components ORDER BY review_id DESC";
-$result_reviews_tailwind_components = $connect->query($query_reviews_sip, PDO::FETCH_ASSOC);
+///datacamp
+$query_reviews_datacamp = "SELECT * FROM datacamp ORDER BY review_id DESC";
+$result_reviews_datacamp = $connect->query($query_reviews_datacamp, PDO::FETCH_ASSOC);
+
 
 ///sip total count rating 
 $query_total_ratings_sip = "SELECT COUNT(*) as total_ratings FROM sip";
@@ -87,11 +90,11 @@ $result_total_ratings_tailwind_cheat = mysqli_query($db_connection, $query_total
 $count_data_total_ratings_tailwind_cheat = mysqli_fetch_assoc($result_total_ratings_tailwind_cheat);
 $total_ratings_tailwind_cheat = $count_data_total_ratings_tailwind_cheat['total_ratings'];
 
-//tailwind components
-$query_total_ratings_tailwind_components = "SELECT COUNT(*) as total_ratings FROM sip";
-$result_total_ratings_tailwind_components = mysqli_query($db_connection, $query_total_ratings_tailwind_components);
-$count_data_total_ratings_tailwind_components = mysqli_fetch_assoc($result_total_ratings_tailwind_components);
-$total_ratings_tailwind_components= $count_data_total_ratings_tailwind_components['total_ratings'];
+
+$query_total_ratings_datacamp = "SELECT COUNT(*) as total_ratings FROM datacamp";
+$result_total_ratings_datacamp = mysqli_query($db_connection, $query_total_ratings_datacamp);
+$count_data_total_ratings_datacamp = mysqli_fetch_assoc($result_total_ratings_datacamp);
+$total_ratings_datacamp= $count_data_total_ratings_datacamp['total_ratings'];
 ?>
 
 <!DOCTYPE html>
@@ -121,7 +124,7 @@ $total_ratings_tailwind_components= $count_data_total_ratings_tailwind_component
                      </path>
                   </svg>
                </button>
-               <a href="https://flowbite.com" class="flex ms-2 md:me-24">
+               <a href="../adminpage.php" class="flex ms-2 md:me-24">
                   <img src="https://flowbite.com/docs/images/logo.svg" class="h-8 me-3" alt="FlowBite Logo" />
                   <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white">TechTool
                      Admin</span>
@@ -192,7 +195,6 @@ $total_ratings_tailwind_components= $count_data_total_ratings_tailwind_component
          </div>
       </div>
    </nav>
-
 
    <aside id="logo-sidebar"
       class="fixed top-0 left-0 z-40 w-64 h-screen pt-20 transition-transform -translate-x-full bg-white border-r border-gray-200 sm:translate-x-0 dark:bg-gray-800 dark:border-gray-700"
@@ -294,7 +296,7 @@ $total_ratings_tailwind_components= $count_data_total_ratings_tailwind_component
                   <svg class="flex-shrink-0 w-5 h-5 text-gray-500 transition duration-75 group-hover:text-gray-900 dark:text-gray-400 dark:group-hover:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 18 21">
                      <path d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z"/>
                   </svg>
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Frameworks Rating</span>
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Database rating</span>
                   <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
                   </svg>
@@ -309,7 +311,7 @@ $total_ratings_tailwind_components= $count_data_total_ratings_tailwind_component
                      <path
                         d="M14 2a3.963 3.963 0 0 0-1.4.267 6.439 6.439 0 0 1-1.331 6.638A4 4 0 1 0 14 2Zm1 9h-1.264A6.957 6.957 0 0 1 15 15v2a2.97 2.97 0 0 1-.184 1H19a1 1 0 0 0 1-1v-1a5.006 5.006 0 0 0-5-5ZM6.5 9a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM8 10H5a5.006 5.006 0 0 0-5 5v2a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-2a5.006 5.006 0 0 0-5-5Z" />
                   </svg>
-                  <span class="flex-1 ms-3 whitespace-nowrap">Tailwind Cheat Ratings</span>
+                  <span class="flex-1 ms-3 whitespace-nowrap">Datacamp Rating</span>
                </a>
             </li> 
             <li>
@@ -337,7 +339,7 @@ $total_ratings_tailwind_components= $count_data_total_ratings_tailwind_component
          <div class="rating-header">
             <div class="rating-content">
                <div class="relative overflow-x-auto">
-                  <H1>Total Ratings in Tailwind Components <?php echo $total_ratings_tailwind_components; ?></H1>
+                  <H1>Total Ratings in Datacamp: <?php echo $total_ratings_datacamp; ?></H1>
                   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
@@ -362,7 +364,7 @@ $total_ratings_tailwind_components= $count_data_total_ratings_tailwind_component
                         </tr>
                      </thead>
                      <tbody>
-                        <?php while ($row = $result_reviews_tailwind_components->fetch()): ?>
+                        <?php while ($row = $result_reviews_datacamp->fetch()): ?>
                            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                               <th scope="row"
                                  class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">
@@ -397,6 +399,10 @@ $total_ratings_tailwind_components= $count_data_total_ratings_tailwind_component
             </div>
          </div>
       </section>
+
+
+
+
    </section>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
    <script src="../admin-js/admin.js"></script>
