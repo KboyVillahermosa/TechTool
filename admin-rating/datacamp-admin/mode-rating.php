@@ -423,7 +423,7 @@ $total_ratings_mode = $count_data_total_ratings_mode['total_ratings'];
                     </ul>
                 </li>
             </ul>
-        </div>
+        </div>g
     </aside>
     <section class="p-4 sm:ml-64">
 

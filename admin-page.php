@@ -156,6 +156,11 @@ $result_total_ratings_sqlpad = mysqli_query($db_connection, $query_total_ratings
 $count_data_total_ratings_sqlpad = mysqli_fetch_assoc($result_total_ratings_sqlpad);
 $total_ratings_sqlpad = $count_data_total_ratings_sqlpad['total_ratings'];
 
+//geeks for Mode
+$query_total_ratings_mode = "SELECT COUNT(*) as total_ratings FROM mode";
+$result_total_ratings_mode = mysqli_query($db_connection, $query_total_ratings_mode);
+$count_data_total_ratings_mode = mysqli_fetch_assoc($result_total_ratings_mode);
+$total_ratings_mode = $count_data_total_ratings_mode['total_ratings'];
 
 ?>
 
@@ -575,7 +580,7 @@ $total_ratings_sqlpad = $count_data_total_ratings_sqlpad['total_ratings'];
                      <path
                         d="M15 12a1 1 0 0 0 .962-.726l2-7A1 1 0 0 0 17 3H3.77L3.175.745A1 1 0 0 0 2.208 0H1a1 1 0 0 0 0 2h.438l.6 2.255v.019l2 7 .746 2.986A3 3 0 1 0 9 17a2.966 2.966 0 0 0-.184-1h2.368c-.118.32-.18.659-.184 1a3 3 0 1 0 3-3H6.78l-.5-2H15Z" />
                   </svg>
-                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Design Rating</span>
+                  <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Design System Rating</span>
                   <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
                      viewBox="0 0 10 6">
                      <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -995,13 +1000,65 @@ $total_ratings_sqlpad = $count_data_total_ratings_sqlpad['total_ratings'];
                </h1>
             </div>
             <div class="dashboard-content" id="khorma-content">
-               <h1 class="text-white">Geeks for Geeks</h1>
+               <h1 class="text-white">Mode</h1>
                <h1 class="text-white">Total User Rating:
                   <?php echo $total_ratings_mode; ?>
                </h1>
             </div>
          </div>
 
+           <!---------------------------- Designn ------------------------------------>
+           <div class="color-title">
+            <div class="color-content">
+               <h1
+                  class="mb-4 text-3xl font-extrabold leading-none tracking-tight text-gray-900 md:text-2xl  dark:text-white">
+                  Design Tools</h1>
+            </div>
+         </div>
+         <div class="dashboard-header">
+            <div class="dashboard-content" id="adobe-content">
+               <h1 class="text-white">Abstract</h1>
+               <h1 class="text-white">Total User Rating:
+                  <?php echo $total_ratings_datacamp; ?>
+               </h1>
+            </div>
+            <div class="dashboard-content" id="khorma-content">
+               <h1 class="text-white">Figma</h1>
+               <h1 class="text-white">Total User Rating:
+                  <?php echo $total_ratings_dbdiagram; ?>
+               </h1>
+            </div>
+            <div class="dashboard-content" id="khorma-content">
+               <h1 class="text-white">Lottie</h1>
+               <h1 class="text-white">Total User Rating:
+                  <?php echo $total_ratings_geeks; ?>
+               </h1>
+            </div>
+            <div class="dashboard-content" id="khorma-content">
+               <h1 class="text-white">Maze</h1>
+               <h1 class="text-white">Total User Rating:
+                  <?php echo $total_ratings_mode; ?>
+               </h1>
+            </div>
+            <div class="dashboard-content" id="khorma-content">
+               <h1 class="text-white">Overflow</h1>
+               <h1 class="text-white">Total User Rating:
+                  <?php echo $total_ratings_mode; ?>
+               </h1>
+            </div>
+            <div class="dashboard-content" id="khorma-content">
+               <h1 class="text-white">Sketch</h1>
+               <h1 class="text-white">Total User Rating:
+                  <?php echo $total_ratings_mode; ?>
+               </h1>
+            </div>
+            <div class="dashboard-content" id="khorma-content">
+               <h1 class="text-white">Ziplin</h1>
+               <h1 class="text-white">Total User Rating:
+                  <?php echo $total_ratings_mode; ?>
+               </h1>
+            </div>
+         </div>
 
 
       </section>

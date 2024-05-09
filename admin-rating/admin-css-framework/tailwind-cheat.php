@@ -74,7 +74,7 @@ $count_data_total_ratings_sip = mysqli_fetch_assoc($result_total_ratings_sip);
 $total_ratings_sip = $count_data_total_ratings_sip['total_ratings'];
 
 //tailwind cheat
-$query_total_ratings_tailwind_cheat = "SELECT COUNT(*) as total_ratings FROM sip";
+$query_total_ratings_tailwind_cheat = "SELECT COUNT(*) as total_ratings FROM tailwind_cheat";
 $result_total_ratings_tailwind_cheat = mysqli_query($db_connection, $query_total_ratings_tailwind_cheat);
 $count_data_total_ratings_tailwind_cheat = mysqli_fetch_assoc($result_total_ratings_tailwind_cheat);
 $total_ratings_tailwind_cheat = $count_data_total_ratings_tailwind_cheat['total_ratings'];
@@ -322,7 +322,7 @@ $total_ratings_tailwind_cheat = $count_data_total_ratings_tailwind_cheat['total_
          <div class="rating-header">
             <div class="rating-content">
                <div class="relative overflow-x-auto">
-                  <H1>Total Ratings in Khorma: <?php echo $total_ratings_tailwind_cheat; ?></H1>
+                  <h1 class="text-white">Total Ratings in Tailwind Cheat: <?php echo $total_ratings_tailwind_cheat; ?></h1>
                   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>

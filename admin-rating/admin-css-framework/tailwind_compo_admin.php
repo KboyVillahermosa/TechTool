@@ -88,7 +88,7 @@ $count_data_total_ratings_tailwind_cheat = mysqli_fetch_assoc($result_total_rati
 $total_ratings_tailwind_cheat = $count_data_total_ratings_tailwind_cheat['total_ratings'];
 
 //tailwind components
-$query_total_ratings_tailwind_components = "SELECT COUNT(*) as total_ratings FROM sip";
+$query_total_ratings_tailwind_components = "SELECT COUNT(*) as total_ratings FROM tailwind_components";
 $result_total_ratings_tailwind_components = mysqli_query($db_connection, $query_total_ratings_tailwind_components);
 $count_data_total_ratings_tailwind_components = mysqli_fetch_assoc($result_total_ratings_tailwind_components);
 $total_ratings_tailwind_components= $count_data_total_ratings_tailwind_components['total_ratings'];
@@ -337,7 +337,7 @@ $total_ratings_tailwind_components= $count_data_total_ratings_tailwind_component
          <div class="rating-header">
             <div class="rating-content">
                <div class="relative overflow-x-auto">
-                  <H1>Total Ratings in Tailwind Components <?php echo $total_ratings_tailwind_components; ?></H1>
+                  <h1 class="text-white">Total Ratings in Tailwind Components <?php echo $total_ratings_tailwind_components; ?></h1>
                   <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
                      <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
                         <tr>
